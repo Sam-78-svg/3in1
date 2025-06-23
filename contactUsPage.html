@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body{
+         background-color: #fca311;
+        color: #14213d;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-sm bg-primary sticky-top p-2">
+        <div class="container-fluid brandNamw d-block m-auto" style="width: 20%;">
+            <a href="#" class="navbar-brand h1 text-light fs-5 ">Hisen.co</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#CollapseNavbar"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse d-md-flex justify-content-end fs-5" id="CollapseNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link active text-light">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./about.html" class="nav-link text-light">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link text-light">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-warning">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light"></a>
+                </li>
+            </ul>
+            <button class="btn btn-info rounded-3">Sign In</button>
+        </div>
+    </nav>
+    <!-- Navbar Section End -->
+
+    <!-- Main Section -->
+    <div class="form rounded-3 container mt-3 mb-3 border border-3 p-3" style="">
+        <h1 class="text-dark text-center">Contact Us Form</h1>
+        <form action="" class="mt-3" style="">
+            <div class="mb-3">
+                <label for="yourname" class="form-lable h4 mb-2 fw-normal">Your Name:</label>
+                <input type="text" id="yourname" class="form-control border border-3" placeholder="Enter your Name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-lable h4 mb-2 fw-normal">Your Email:</label>
+                <input type="email" id="email" class="form-control border border-3" placeholder="Enter your Email">
+            </div>
+            <div class="mb-3 col-md-2 col-sm-4">
+                <label for="yourname" class="form-lable h4 mb-2 fw-normal">Your Name:</label>
+                <div class="input-group">
+                    <span class="input-group-text">+91</span>
+                    <input type="text" id="yourname" class="form-control text-center border border-3 fs-5" placeholder="xxx-xxx-xxxx">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-lable h4 mb-2 fw-normal">Your Message:</label>
+                <textarea name="message" id="message" rows="5" class="form-control border border-3" placeholder="Write your message"></textarea>
+            </div>
+            <div class="mb-3 col-xs-6 col-md-2 d-grid gap-2 ">
+                <button class="btn btn-outline-primary btn-lg  ">Submit</button>
+            </div>
+        </form>
+    </div>
+    <!-- Main Section Ends -->
+
+    <!-- Footer Section -->
+    <footer class="bg-dark-subtle text-center p-2">
+        <p class="text-black m-auto">© 2023 Hisen.co. All rights reserved.</p>
+    </footer>
+    <!-- Footer Section End -->
+</body>
+
+</html>
