@@ -11,4 +11,10 @@ document.addEventListener('DOMContentLoaded', function( e) {
         popup.style.display = 'none';
     });
 
+    document.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+
 });
