@@ -1,3 +1,4 @@
+/* Comman css for all */
 .overlay{
     display: none;
     z-index: 999;
@@ -38,3 +39,65 @@
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+
+.popup form button{
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#social-icons i:hover{
+    cursor: pointer;
+    transform: scale(1.20);
+    
+}
+/* Comman Css Ends */
+
+
+
+/* Index.html (css) */
+
+/* services cards */
+#cards{
+    display: flex;
+    text-align: justify;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    text-wrap: wrap;
+}
+#cards:hover{
+    transform: scale(1.05);
+    transition:background  1.5s;
+    background: linear-gradient(45deg, #f3f3f3, #e2e2e2);
+    box-shadow: 0 4px 10px rgba(71, 44, 44, 0.2);
+}
+
+
+/* home introduction */
+#introduction {
+    background:linear-gradient(45deg, #f0f0f0, #d9d9d9);
+    display: flex;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+/* Index.html (css) ends here */
+
+
+
+
+/* Contact Us Page (css)  */
+
+/* contact form */
+#ContactForm input,
+#ContactForm textarea{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+/* Contact us page (css) ends */

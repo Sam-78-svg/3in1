@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"></script>
-    
+
 </head>
 <style>
     body {
-        background-color: #fca311;
+        background-color: #f2b85c;
         color: #14213d;
     }
 </style>
@@ -33,7 +35,7 @@
                     <a href="./about.html" class="nav-link text-light">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./index.html" class="nav-link text-light">Services</a>
+                    <a href="./index.html#Services" class="nav-link text-light">Services</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link text-warning">Contact Us</a>
@@ -65,16 +67,29 @@
         </div>
         <div class="form rounded-3 container mt-3 mb-3 border border-3 p-3">
             <h1 class="text-dark text-center">Contact Us Form</h1>
-            <form action="" class="mt-3">
-                <div class="mb-3">
-                    <label for="yourname" class="form-lable h4 mb-2 fw-normal">Your Name:</label>
-                    <input type="text" id="yourname" class="form-control border border-3" placeholder="Enter your Name">
+            <form action="" class="mt-3" id="ContactForm">
+                <div class="row row-cols-sm-3 d-block d-sm-flex">
+                    <div class="mb-3 col">
+                        <label for="yourname" class="form-lable h4 mb-2 fw-normal">First Name:</label>
+                        <input type="text" id="yourname" class="form-control border border-3"
+                            placeholder="Enter First Name">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="yourname" class="form-lable h4 mb-2 fw-normal">Middle Name:</label>
+                        <input type="text" id="yourname" class="form-control border border-3"
+                            placeholder="Enter Middle Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="yourname" class="form-lable h4 mb-2 fw-normal">Last Name:</label>
+                        <input type="text" id="yourname" class="form-control border border-3"
+                            placeholder="Enter Last Name">
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-lable h4 mb-2 fw-normal">Your Email:</label>
                     <input type="email" id="email" class="form-control border border-3" placeholder="Enter your Email">
                 </div>
-                <div class="mb-3 col-md-2 col-sm-4">
+                <div class="mb-3 col-md-4 col-sm">
                     <label for="yourname" class="form-lable h4 mb-2 fw-normal">Your Name:</label>
                     <div class="input-group">
                         <span class="input-group-text">+91</span>
@@ -87,7 +102,7 @@
                     <textarea name="message" id="message" rows="5" class="form-control border border-3"
                         placeholder="Write your message"></textarea>
                 </div>
-                <div class="mb-3 col-xs-6 col-md-2 d-grid gap-2 ">
+                <div class="mb-3 col-xs-6 col-md-2 d-grid gap-2">
                     <button class="btn btn-outline-primary btn-lg  ">Submit</button>
                 </div>
             </form>
@@ -96,8 +111,14 @@
     <!-- Main Section Ends -->
 
     <!-- Footer Section -->
-    <footer class="bg-dark-subtle text-center p-2">
-        <p class="text-black m-auto">© 2023 Hisen.co. All rights reserved.</p>
+    <footer class="bg-dark-subtle text-center p-2 d-block shadow s">
+        <p class="text-black h3 m-auto">© 2023 Hisen.co. All rights reserved.</p>
+        <div class="d-flex justify-content-center m-3 gap-4" id="social-icons">
+            <i class="fa fa-instagram fs-2 m-2" aria-hidden="true"></i>
+            <i class="fa fa-facebook fs-2 m-2" aria-hidden="true"></i>
+            <i class="fa fa-youtube fs-2 m-2" aria-hidden="true"></i>
+        </div>
+
     </footer>
     <!-- Footer Section End -->
 
