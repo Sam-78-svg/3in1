@@ -45,9 +45,47 @@
 
     <!-- Main section Start here -->
     <main>
-        <div class="overlay" id="overlay">
+        <!-- signup page -->
+        <div class="overlay" id="overlay2">
             <div class="popup">
                 <span class="close-btn btn-close" id="close-popup"></span>
+                <h2 class="text-primary text-center">Sign up</h2>
+                <form action="#">
+                    <div class="mb-3">
+                        <label for="Name" class="form-label">Name:</label>
+                        <input type="text" id="Name" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">Create Username:</label>
+                        <input type="text" id="userName" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" id="email" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Password" class="form-label">Password:</label>
+                        <input type="password" id="Password" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-outline-primary d-grid col-md-3 " type="submit">Submit</button>
+                        <p class="text-center">Already have and account | <a href="#" id="signin-btn"
+                                style="text-decoration: none;">Sign-in</a>
+                        </p>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+        <!-- signup page end -->
+        <div class="overlay" id="overlay">
+            <div class="popup">
+                <span class="close-btn btn-close" id="close-popup1"></span>
                 <h2 class="text-primary text-center">Sign in</h2>
                 <form action="#" id="signin-form">
                     <label for="name">Name:</label>
@@ -55,30 +93,74 @@
                     <label for="password">Password:</label>
                     <input type="text" name="password" id="userPassword" required placeholder="Password">
                     <button class="btn btn-outline-primary d-grid col-md-3 " type="submit">Submit</button>
-                    <p class="text-center">Create account | <a href="#" style="text-decoration: none;">Sign-up</a></p>
+                    <p class="text-center">Create account | <a href="#" id="signup-btn"
+                            style="text-decoration: none;">Sign-up</a></p>
                 </form>
             </div>
         </div>
-        <div class="main container p-md-4">
-            <h1 class="h1 text-emphasis">What is Hisec.com ?</h1>
-            <p class="text-muted fs-5">Hisen.co is a platform that provides a wide range of services to help individuals
-                and businesses thrive in the digital world. From web development to digital marketing, we offer
-                solutions tailored to meet the unique needs of our clients.</p>
-            <h2 class="h2 text-emphasis">What is Our Mission ?</h2>
-            <p class="text-muted fs-5">At Hisen.co, our mission is to empower our clients by providing innovative and
-                effective digital solutions. We strive to deliver high-quality services that drive results and help our
-                clients achieve their goals.</p>
+        <div class="main container p-md-4 accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h1 class="accordion-header">
+                    <button class="btn h1 fw-bold fs-2 accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                        type="button">What is Hisec.com ?</button>
+                </h1>
+                <div class="accordion-collapse collapse show" id="collapseOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p class="text-muted fs-5">Hisen.co is a leading digital solutions provider that specializes in
+                            web
+                            development, mobile app development, and digital marketing. We are dedicated to helping
+                            businesses of all sizes achieve their online goals through innovative and effective digital
+                            strategies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="btn h1 fw-bold fs-2 accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                        type="button" aria-controls="collapseTwo" aria-expanded="false">What Services do we provide ?</button>
+                </h2>
+                <div class="accordion-collapse collapse" id="collapseTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p class="text-muted fs-5">At Hisen.co, we offer a wide range of digital services to help businesses succeed online. Our services include:</p>
+                        <ul class="text-muted fs-5">
+                            <li>Web Development</li>
+                            <li>Mobile App Development</li>
+                            <li>Digital Marketing</li>
+                            <li>UI/UX Design</li>
+                            <li>E-commerce Solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="btn p-3  fw-bold fs-2 accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                        type="button">What is Our Mission ?</button>
+                </h2>
+                <div class="accordion-collapse collapse" id="collapseThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p class="text-muted fs-5">At Hisen.co, our mission is to empower our clients by providing innovative and
+                            effective digital solutions. We strive to deliver high-quality services that drive results and help our
+                            clients achieve their goals.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <!-- Footer Section -->
     <footer class="bg-dark-subtle text-center p-2 d-block shadow s">
         <p class="text-black h3 m-auto">© 2023 Hisen.co. All rights reserved.</p>
         <div class="d-flex justify-content-center m-3 gap-4" id="social-icons">
-            <i class="fa fa-instagram fs-2 m-2" aria-hidden="true"></i>
-            <i class="fa fa-facebook fs-2 m-2" aria-hidden="true"></i>
-            <i class="fa fa-youtube fs-2 m-2" aria-hidden="true"></i>
-            <i class="fa fa-linkedin fs-2 m-2" aria-hidden="true"></i>
-            <i class="fa fa-github fs-2 m-2" aria-hidden="true"></i>
+            <i class="fa fa-instagram fs-2 m-2" aria-hidden="true" data-price="https://www.instagram.com/"
+                onclick="jump(this)"><span id="iconName">Instagram</span></i>
+            <i class="fa fa-facebook fs-2 m-2" aria-hidden="true" data-price="https://www.facebook.com/"
+                onclick="jump(this)"><span id="iconName">Facebook</span></i>
+            <i class="fa fa-youtube fs-2 m-2" aria-hidden="true" data-price="https://www.youtube.com/"
+                onclick="jump(this)"><span id="iconName">YouTube</span></i>
+            <i class="fa fa-linkedin fs-2 m-2" aria-hidden="true" data-price="https://www.linkedin.com/"
+                onclick="jump(this)"><span id="iconName">LinkedIn</span></i>
+            <i class="fa fa-github fs-2 m-2" aria-hidden="true" data-price="https://github.com/"
+                onclick="jump(this)"><span id="iconName">GitHub</span></i>
         </div>
 
     </footer><!-- Footer Section End -->

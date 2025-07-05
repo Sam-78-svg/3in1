@@ -50,10 +50,45 @@
     <!-- Navbar Section End -->
 
     <!-- Main Section -->
-    <main>
-        <div class="overlay" id="overlay">
+    <main style="padding: 1rem;">
+          <div class="overlay" id="overlay2">
             <div class="popup">
                 <span class="close-btn btn-close" id="close-popup"></span>
+                <h2 class="text-primary text-center">Sign up</h2>
+                <form action="#">
+                    <div class="mb-3">
+                        <label for="Name" class="form-label">Name:</label>
+                        <input type="text" id="Name" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">Create Username:</label>
+                        <input type="text" id="userName" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" id="email" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Password" class="form-label">Password:</label>
+                        <input type="password" id="Password" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-outline-primary d-grid col-md-3 " type="submit">Submit</button>
+                        <p class="text-center">Already have and account | <a href="#" id="signin-btn" style="text-decoration: none;">Sign-in</a> 
+                        </p>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+        <div class="overlay" id="overlay">
+            <div class="popup">
+                <span class="close-btn btn-close" id="close-popup1"></span>
                 <h2 class="text-primary text-center">Sign in</h2>
                 <form action="#" id="signin-form">
                     <label for="name">Name:</label>
@@ -61,7 +96,7 @@
                     <label for="password">Password:</label>
                     <input type="text" name="password" id="userPassword" required placeholder="Password">
                     <button class="btn btn-outline-primary d-grid col-md-3 " type="submit">Submit</button>
-                    <p class="text-center">Create account | <a href="#" style="text-decoration: none;">Sign-up</a></p>
+                    <p class="text-center">Create account | <a href="#" id="signup-btn" style="text-decoration: none;">Sign-up</a></p>
                 </form>
             </div>
         </div>
@@ -114,9 +149,16 @@
     <footer class="bg-dark-subtle text-center p-2 d-block shadow s">
         <p class="text-black h3 m-auto">© 2023 Hisen.co. All rights reserved.</p>
         <div class="d-flex justify-content-center m-3 gap-4" id="social-icons">
-            <i class="fa fa-instagram fs-2 m-2" aria-hidden="true"></i>
-            <i class="fa fa-facebook fs-2 m-2" aria-hidden="true"></i>
-            <i class="fa fa-youtube fs-2 m-2" aria-hidden="true"></i>
+            <i class="fa fa-instagram fs-2 m-2" aria-hidden="true" data-price="https://www.instagram.com/"
+                onclick="jump(this)"></i>
+            <i class="fa fa-facebook fs-2 m-2" aria-hidden="true" data-price="https://www.facebook.com/"
+                onclick="jump(this)"></i>
+            <i class="fa fa-youtube fs-2 m-2" aria-hidden="true" data-price="https://www.youtube.com/"
+                onclick="jump(this)"></i>
+            <i class="fa fa-linkedin fs-2 m-2" aria-hidden="true" data-price="https://www.linkedin.com/"
+                onclick="jump(this)"></i>
+            <i class="fa fa-github fs-2 m-2" aria-hidden="true" data-price="https://github.com/"
+                onclick="jump(this)"></i>
         </div>
 
     </footer>

@@ -10,6 +10,17 @@
     align-items: center;
     justify-content: center;
 }
+.overlayz{
+    display: none;
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
 .popup{
     padding: 2rem;
     background-color: #fff;
@@ -51,8 +62,21 @@
 }
 #social-icons i:hover{
     cursor: pointer;
-    transform: scale(1.20);
+    transform: scale(1.25);
+     transition: transform 0.3s ease-in-out;
     
+}
+#social-icons i span {
+    display: none;
+}
+
+#social-icons i:hover span {
+    display: flex;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    color: #096c82;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: color 1.3s ease-in-out;
 }
 /* Comman Css Ends */
 
@@ -69,11 +93,17 @@
     gap: 1rem;
     padding: 1rem;
     text-wrap: wrap;
+
 }
 #cards:hover{
-    transform: scale(1.05);
-    transition:background  1.5s;
-    background: linear-gradient(45deg, #f3f3f3, #e2e2e2);
+    cursor: pointer;
+    transform: scaleX(1.25);
+    height: auto;
+    width: auto;
+    margin:0 1rem;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+    /* background: linear-gradient(45deg, #f3f3f3, #e2e2e2); */
     box-shadow: 0 4px 10px rgba(71, 44, 44, 0.2);
 }
 
