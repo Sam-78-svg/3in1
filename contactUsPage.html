@@ -58,23 +58,23 @@
                 <form action="#">
                     <div class="mb-3">
                         <label for="Name" class="form-label">Name:</label>
-                        <input type="text" id="Name" class="form-control">
+                        <input type="text" id="Name" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label for="userName" class="form-label">Create Username:</label>
-                        <input type="text" id="userName" class="form-control">
+                        <input type="text" id="userName" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email:</label>
-                        <input type="email" id="email" class="form-control">
+                        <input type="email" id="email" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label for="Password" class="form-label">Password:</label>
-                        <input type="password" id="Password" class="form-control">
+                        <input type="password" id="Password" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label for="confirmPassword" class="form-label">Confirm Password:</label>
-                        <input type="password" id="confirmPassword" class="form-control">
+                        <input type="password" id="confirmPassword" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <button class="btn btn-outline-primary d-grid col-md-3 " type="submit">Submit</button>
@@ -150,15 +150,15 @@
         <p class="text-black h3 m-auto">© 2023 Hisen.co. All rights reserved.</p>
         <div class="d-flex justify-content-center m-3 gap-4" id="social-icons">
             <i class="fa fa-instagram fs-2 m-2" aria-hidden="true" data-price="https://www.instagram.com/"
-                onclick="jump(this)"></i>
+                onclick="jump(this)"><span id="iconName">Instagram</span></i>
             <i class="fa fa-facebook fs-2 m-2" aria-hidden="true" data-price="https://www.facebook.com/"
-                onclick="jump(this)"></i>
+                onclick="jump(this)"><span id="iconName">Facebook</span></i>
             <i class="fa fa-youtube fs-2 m-2" aria-hidden="true" data-price="https://www.youtube.com/"
-                onclick="jump(this)"></i>
+                onclick="jump(this)"><span id="iconName">YouTube</span></i>
             <i class="fa fa-linkedin fs-2 m-2" aria-hidden="true" data-price="https://www.linkedin.com/"
-                onclick="jump(this)"></i>
+                onclick="jump(this)"><span id="iconName">LinkedIn</span></i>
             <i class="fa fa-github fs-2 m-2" aria-hidden="true" data-price="https://github.com/"
-                onclick="jump(this)"></i>
+                onclick="jump(this)"><span id="iconName">GitHub</span></i>
         </div>
 
     </footer>

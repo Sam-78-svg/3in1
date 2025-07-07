@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm bg-primary sticky-top p-2">
+        <div class="container-fluid brandNamw d-block m-auto" style="width: 20%;">
+            <a href="#" class="navbar-brand h1 text-light fs-5 ">Hisen.co</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#CollapseNavbar"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse d-md-flex justify-content-end fs-5" id="CollapseNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link active text-warning">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./about.html" class="nav-link text-light">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./index.html#Services" class="nav-link text-light">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./contactUsPage.html" class="nav-link text-light">Contact Us</a>
+                </li>
+            </ul>
+            <button class="btn btn-info rounded-3" id="signin-btn">Sign In</button>
+        </div>
+    </nav>
+    <!-- Navbar Section End -->
+
+    <!-- Main Section -->
+    <main style="padding: 1rem;">
+        <!-- Fieldset -->
+        <h1 class="h1 text-center text-primary-emphasis mb-3">Start a New Project</h1>
+        <form action="#">
+            <fieldset style="border: 2px solid black; border-radius: 10px; padding: 1rem;">
+                <legend class="text-primary-emphasis text-md-start text-center h2">User Information:</legend>
+                <fieldset style="border: 2px solid black; border-radius: 10px; padding: 1rem;margin: 0.5rem;">
+                    <legend class="text-primary h2">Basic Details:</legend>
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">Username:<span class="text-danger">*</span></label>
+                        <input type="text" id="userName" class="form-control" placeholder="Enter your username"
+                            required>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 g-3">
+                        <div class="mb-3 col">
+                            <label for="email" class="form-label">Email:<span class="text-danger">*</span></label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="phoneNumber" class="form-label">Phone Number:<span
+                                    class="text-danger">*</span></label>
+                            <input type="tel" id="phoneNumber" class="form-control"
+                                placeholder="Enter your phone number" required>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset style="border: 2px solid black; border-radius: 10px; padding: 1rem;margin: 0.5rem;">
+                    <legend class="text-primary h2">Education:</legend>
+                    <div class=" row row-cols-1 row-cols-md-2 mb-3">
+                        <div class="mb-3 col">
+                            <label for="degree" class="form-label">Degree:<span class="text-danger">*</span></label>
+                            <select name="degree" id="degree" class="form-select" aria-label="Default select example"
+                                style="z-index: -1;" required>
+                                <option value="...">Select</option>
+                                <option value="Bachelors">Bachelors</option>
+                                <option value="Masters">Masters</option>
+                                <option value="PhD">PhD</option>
+                                <option value="Diploma">Diploma</option>
+                                <option value="Certificate">Certificate</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="nameOfTheDegree" class="form-label">Name of the Degree:<span
+                                    class="text-danger">*</span></label>
+                            <select name="nameOfTheDegree" id="nameOfTheDegree" class="form-select"
+                                aria-label="Default select example" required>
+                                <option value="...">Select</option>
+                                <option value="BCA">BCA</option>
+                                <option value="MCA">MCA</option>
+                                <option value="BBA">BBA</option>
+                                <option value="MBA">MBA</option>
+                                <option value="BCom">BCom</option>
+                                <option value="MCom">MCom</option>
+                                <option value="BSc">BSc</option>
+                                <option value="MSc">MSc</option>
+                                <option value="BTech">BTech</option>
+                                <option value="MTech">MTech</option>
+                                <option value="PhD">PhD</option>
+                                <option value="Diploma">Diploma</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="yearOfPassing" class="form-label">Year of Passing:<span
+                                    class="text-danger">*</span></label>
+                            <input type="number" id="yearOfPassing" class="form-control"
+                                placeholder="Enter year of passing" min="1900" max="2100" required>
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="percentage" class="form-label">Percentage:<span
+                                    class="text-danger">*</span></label>
+                            <input type="number" id="percentage" class="form-control"
+                                placeholder="Enter your percentage" min="0" max="100" required>
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="cgpa">CGPA:<span class="text-danger">*</span></label>
+                            <input type="number" name="cgpa" id="cgpa" class="form-control"
+                                placeholder="Enter your CGPA" min="0" max="10" step="0.1" required>
+                        </div>
+
+                    </div>
+                    <p class="text-warning-emphasis h4 text-center"><span style="color: red;"><sup>*</sup></span>If CGPA
+                        is not available, please enter the percentage.</p>
+                </fieldset>
+                <fieldset style="border: 2px solid black;padding: 1rem; border-radius: 10px; margin: 0.5rem;">
+                    <legend class="text-primary h2">Correspondance Address:</legend>
+                    <div class="mb3 row row-cols-1 row-cols-md-2">
+                        <div class="mb-3 col">
+                            <label for="address">Address:<span class="text-danger">*</span></label>
+                            <input type="text" id="address" class="form-control" placeholder="Enter your address"
+                                required>
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="street">Street</label>
+                            <input type="text" id="street" class="form-control" placeholder="Enter your street">
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="landmark">Ladmark:</label>
+                            <input type="text" id="landmark" class="form-control" placeholder="Enter your landmark">
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="city">City:<span class="text-danger">*</span></label>
+                            <input type="text" id="city" class="form-control" placeholder="Enter your city" required>
+                        </div>
+                         <div class="mb-3 col">
+                            <label for="pincode">Pincode:<span class="text-danger">*</span></label>
+                            <input type="text" id="pincode" class="form-control" placeholder="Enter your pincode"
+                                pattern="[0-9]{6}" required>
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="state/ut">State/UT:<span class="text-danger">*</span></label>
+                            <select name="state/ut" id="state/ut" style="position: relative; z-index: 1;" class="form-select" required>
+                                <option value="">Select your state</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and
+                                    Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Ladakh">Ladakh</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Puducherry">Puducherry</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                 <fieldset style="border: 2px solid black;padding: 1rem; border-radius: 10px; margin: 0.5rem;">
+                    <legend class="text-primary h2">Permanent Address:</legend>
+                    <div class="mb3 row row-cols-1 row-cols-md-2">
+                        <div class="mb-3 col">
+                            <label for="address">Address:<span class="text-danger">*</span></label>
+                            <input type="text" id="address" class="form-control" placeholder="Enter your address"
+                                required>
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="street">Street</label>
+                            <input type="text" id="street" class="form-control" placeholder="Enter your street">
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="landmark">Ladmark:</label>
+                            <input type="text" id="landmark" class="form-control" placeholder="Enter your landmark">
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="city">City:<span class="text-danger">*</span></label>
+                            <input type="text" id="city" class="form-control" placeholder="Enter your city" required>
+                        </div>
+                         <div class="mb-3 col">
+                            <label for="pincode">Pincode:<span class="text-danger">*</span></label>
+                            <input type="text" id="pincode" class="form-control" placeholder="Enter your pincode"
+                                pattern="[0-9]{6}" required>
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="state/ut" class="form-label">State/UT:<span class="text-danger">*</span></label>
+                            <select name="state/ut" id="state/ut" style="position: relative; z-index: 1;" class="form-select" required>
+                                <option value="">Select your state</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and
+                                    Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Ladakh">Ladakh</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Puducherry">Puducherry</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="border border-2 border-black rounded-3 p-3 m-2">
+                    <legend class="h2 text-primary">Project Details:</legend>
+                    <div class="row row-cols-1">
+                        <div class="col mb-3">
+                            <label for="projectName" class="form-label">Project Name: <span class="text-danger">*</span></label>
+                            <input type="text" id="projectName" class="form-control" placeholder="Enter project name"
+                                required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="startDate" class="form-label">Start Date: <span class="text-danger">*</span></label>
+                            <input type="date" id="startDate" class="form-control" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="endDate" class="form-label">End Date: <span class="text-danger">*</span></label>
+                            <input type="date" id="endDate" class="form-control" required>
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <label for="numberOfTeamMembers" class="form-label">Number of Team Members: <span class="text-danger">*</span></label>
+                            <input type="number" id="numberOfTeamMembers" class="form-control" placeholder="Enter number of team members"
+                                required>
+                        </div>
+                        <div class="col-md-10 mb-3">
+                            <label for="projectDescription" class="form-label">Project Description & Output: <span class="text-danger">*</span></label>
+                            <textarea id="projectDescription" class="form-control" rows="3" placeholder="Enter project description"
+                                required></textarea>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </fieldset>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary btn-lg m-2" id="save-btn">Save</button>
+                <button type="reset" class="btn btn-secondary btn-lg m-2">Reset</button>
+            </div>
+        </form>
+    </main>
+    <!-- Main Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="bg-dark-subtle text-center p-2 d-block shadow s">
+        <p class="text-black h3 m-auto">© 2023 Hisen.co. All rights reserved.</p>
+        <div class="d-flex justify-content-center m-3 gap-4" id="social-icons">
+            <i class="fa fa-instagram fs-2 m-2" aria-hidden="true" data-price="https://www.instagram.com/"
+                onclick="jump(this)"><span id="iconName">Instagram</span></i>
+            <i class="fa fa-facebook fs-2 m-2" aria-hidden="true" data-price="https://www.facebook.com/"
+                onclick="jump(this)"><span id="iconName">Facebook</span></i>
+            <i class="fa fa-youtube fs-2 m-2" aria-hidden="true" data-price="https://www.youtube.com/"
+                onclick="jump(this)"><span id="iconName">YouTube</span></i>
+            <i class="fa fa-linkedin fs-2 m-2" aria-hidden="true" data-price="https://www.linkedin.com/"
+                onclick="jump(this)"><span id="iconName">LinkedIn</span></i>
+            <i class="fa fa-github fs-2 m-2" aria-hidden="true" data-price="https://github.com/"
+                onclick="jump(this)"><span id="iconName">GitHub</span></i>
+        </div>
+
+    </footer><!-- Footer Section End -->
+    <script src="signin-up.js"></script>
+    <script src="saveContact.js"></script>
+</body>
+
+</html>
