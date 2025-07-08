@@ -10,8 +10,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    #toolt:hover .tooltText{
+        visibility: visible;
+    }
+</style>
 
 <body>
+    <div class="position-fixed p-3 bg-secondary badge d-flex flex-column toolt" style="right: 6px;bottom: 20px; border-radius: 50%;" onmouseover="document.getElementsByClassName('tooltText').style.visibility = 'visible'">
+        <div>
+            <a href="#" class="fw-bold fs-5"  style="text-decoration: none;color: aliceblue;">
+                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
+        <p class="tooltText text-dark fs-5" style="visibility:hidden;position: absolute;z-index: -1;top: 100%;right:0;">Name</p>
+    </div>
+
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm bg-primary sticky-top p-2">
         <div class="container-fluid brandNamw d-block m-auto" style="width: 20%;">
@@ -143,14 +158,15 @@
                             <label for="city">City:<span class="text-danger">*</span></label>
                             <input type="text" id="city" class="form-control" placeholder="Enter your city" required>
                         </div>
-                         <div class="mb-3 col">
+                        <div class="mb-3 col">
                             <label for="pincode">Pincode:<span class="text-danger">*</span></label>
                             <input type="text" id="pincode" class="form-control" placeholder="Enter your pincode"
                                 pattern="[0-9]{6}" required>
                         </div>
                         <div class="mb-3 col">
                             <label for="state/ut">State/UT:<span class="text-danger">*</span></label>
-                            <select name="state/ut" id="state/ut" style="position: relative; z-index: 1;" class="form-select" required>
+                            <select name="state/ut" id="state/ut" style="position: relative; z-index: 1;"
+                                class="form-select" required>
                                 <option value="">Select your state</option>
                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -193,7 +209,7 @@
                         </div>
                     </div>
                 </fieldset>
-                 <fieldset style="border: 2px solid black;padding: 1rem; border-radius: 10px; margin: 0.5rem;">
+                <fieldset style="border: 2px solid black;padding: 1rem; border-radius: 10px; margin: 0.5rem;">
                     <legend class="text-primary h2">Permanent Address:</legend>
                     <div class="mb3 row row-cols-1 row-cols-md-2">
                         <div class="mb-3 col">
@@ -213,14 +229,15 @@
                             <label for="city">City:<span class="text-danger">*</span></label>
                             <input type="text" id="city" class="form-control" placeholder="Enter your city" required>
                         </div>
-                         <div class="mb-3 col">
+                        <div class="mb-3 col">
                             <label for="pincode">Pincode:<span class="text-danger">*</span></label>
                             <input type="text" id="pincode" class="form-control" placeholder="Enter your pincode"
                                 pattern="[0-9]{6}" required>
                         </div>
                         <div class="mb-3 col">
                             <label for="state/ut" class="form-label">State/UT:<span class="text-danger">*</span></label>
-                            <select name="state/ut" id="state/ut" style="position: relative; z-index: 1;" class="form-select" required>
+                            <select name="state/ut" id="state/ut" style="position: relative; z-index: 1;"
+                                class="form-select" required>
                                 <option value="">Select your state</option>
                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -267,12 +284,14 @@
                     <legend class="h2 text-primary">Project Details:</legend>
                     <div class="row row-cols-1">
                         <div class="col mb-3">
-                            <label for="projectName" class="form-label">Project Name: <span class="text-danger">*</span></label>
+                            <label for="projectName" class="form-label">Project Name: <span
+                                    class="text-danger">*</span></label>
                             <input type="text" id="projectName" class="form-control" placeholder="Enter project name"
                                 required>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="startDate" class="form-label">Start Date: <span class="text-danger">*</span></label>
+                            <label for="startDate" class="form-label">Start Date: <span
+                                    class="text-danger">*</span></label>
                             <input type="date" id="startDate" class="form-control" required>
                         </div>
                         <div class="col-md-6 mb-3">
@@ -280,14 +299,16 @@
                             <input type="date" id="endDate" class="form-control" required>
                         </div>
                         <div class="col-md-2 mb-3">
-                            <label for="numberOfTeamMembers" class="form-label">Number of Team Members: <span class="text-danger">*</span></label>
-                            <input type="number" id="numberOfTeamMembers" class="form-control" placeholder="Enter number of team members"
-                                required>
+                            <label for="numberOfTeamMembers" class="form-label">Number of Team Members: <span
+                                    class="text-danger">*</span></label>
+                            <input type="number" id="numberOfTeamMembers" class="form-control"
+                                placeholder="Enter number of team members" required>
                         </div>
                         <div class="col-md-10 mb-3">
-                            <label for="projectDescription" class="form-label">Project Description & Output: <span class="text-danger">*</span></label>
-                            <textarea id="projectDescription" class="form-control" rows="3" placeholder="Enter project description"
-                                required></textarea>
+                            <label for="projectDescription" class="form-label">Project Description & Output: <span
+                                    class="text-danger">*</span></label>
+                            <textarea id="projectDescription" class="form-control" rows="3"
+                                placeholder="Enter project description" required></textarea>
                         </div>
                     </div>
 
