@@ -1,5 +1,5 @@
 /* Comman css for all */
-.overlay{
+.overlay {
     display: none;
     z-index: 999;
     position: fixed;
@@ -10,7 +10,8 @@
     align-items: center;
     justify-content: center;
 }
-.overlayz{
+
+.overlayz {
     display: none;
     z-index: 999;
     position: fixed;
@@ -21,16 +22,18 @@
     align-items: center;
     justify-content: center;
 }
-.popup{
+
+.popup {
     padding: 2rem;
     background-color: #fff;
     border-radius: 10px;
     width: 90%;
     max-width: 400px;
     position: relative;
-    box-shadow: 0px 2px 16px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.3);
 }
-.close-btn{
+
+.close-btn {
     position: absolute;
     top: 10px;
     right: 15px;
@@ -39,19 +42,8 @@
     color: #947878;
 
 }
-.popup form{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.popup form input{
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
 
-.popup form button{
+.popup form button {
     padding: 0.5rem;
     font-size: 1rem;
     background-color: #5cb85c;
@@ -60,12 +52,14 @@
     border-radius: 5px;
     cursor: pointer;
 }
-#social-icons i:hover{
+
+#social-icons i:hover {
     cursor: pointer;
     transform: scale(1.25);
-     transition: transform 0.3s ease-in-out;
-    
+    transition: transform 0.3s ease-in-out;
+
 }
+
 #social-icons i span {
     display: none;
 }
@@ -78,6 +72,30 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: color 1.3s ease-in-out;
 }
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+    gap: 0.5rem;
+    width: auto;
+}
+
+.form-content label {
+    font-size: 21px;
+    font-style: oblique;
+    cursor: pointer;
+}
+
+.form-content input {
+    border: none;
+    outline: transparent;
+    background-color: transparent;
+    font-size: large;
+    height: 2rem;
+    width: 100%;
+}
+
 /* Comman Css Ends */
 
 
@@ -85,7 +103,7 @@
 /* Index.html (css) */
 
 /* services cards */
-#cards{
+#cards {
     display: flex;
     text-align: justify;
     flex-wrap: wrap;
@@ -95,12 +113,13 @@
     text-wrap: wrap;
 
 }
-#cards:hover{
+
+#cards:hover {
     cursor: pointer;
     transform: scaleX(1.25);
     height: auto;
     width: auto;
-    margin:0 1rem;
+    margin: 0 1rem;
     transition: transform 0.3s ease-in-out;
     z-index: 1;
     /* background: linear-gradient(45deg, #f3f3f3, #e2e2e2); */
@@ -110,12 +129,13 @@
 
 /* home introduction */
 #introduction {
-    background:linear-gradient(45deg, #f0f0f0, #d9d9d9);
+    background: linear-gradient(45deg, #f0f0f0, #d9d9d9);
     display: flex;
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 /* Index.html (css) ends here */
 
 
@@ -125,7 +145,7 @@
 
 /* contact form */
 #ContactForm input,
-#ContactForm textarea{
+#ContactForm textarea {
     font-size: 1.5rem;
     padding: 0.5rem;
 }
