@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mymasking{
+            width: 300px;
+            height: 300px; /* Fixed typo: 'ps' to 'px' */
+            background: url('./pexels-sohi-807598.jpg') no-repeat center center/cover; /* Fixed typo: 'conver' to 'cover' */
+            -webkit-mask-image: url(#tour-m); /* Use -webkit-mask-image for better browser support */
+            mask-image: url(#tour-m);
+            mask-type: alpha;
+        }
+    </style>
+</head>
+<body>
+    <svg width="0" height="0">
+       <defs>
+         <mask id="tour-m" x="0" y="0" width="300" height="300" maskUnits="userSpaceOnUse">
+            <polygon fill="white" points="150,25 180,111 269,111 197,165 225,251 150,200 75,251 103,165 31,111 120,111"></polygon>
+        </mask>
+       </defs>
+    </svg>
+    <div class="mymasking"></div>
+</body>
+</html>

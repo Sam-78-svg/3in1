@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let firstNamae = "amit";
+        let lastName = "rahul";
+        let empId = "emp01";
+        let email = `${firstNamae}_${lastName}_${empId}@abc.com`;
+        console.log(email);
+
+        // js string methods
+
+        //length
+        console.log(email.length);
+
+        //charAt
+        let str = "javaScript";
+        console.log(str.charAt(4));
+
+        //indexOf
+        console.log(str.indexOf('r'));
+        console.log(str.indexOf('a'));
+
+        //lastIndexOf
+
+        let str2 = "name"
+        console.log(str2.lastIndexOf);
+
+        //toLowerCase
+        //toUpperCase
+        //toUpper
+        //toLower
+
+        //slice(start ,end)
+        let name = "hehelkljl";
+        console.log(name.slice(3, 6));       //from 3 to 5 doesn't includ 6
+
+        //subString(star,end)
+
+        //substr(start(after),lenthOf string);
+        let hel = "hellow";  //llo
+        console.log(hel.substr(2, 3));
+
+        //replace
+        let llo = "i lover cricket";        //(currentstring, new string)
+        console.log(llo);
+        console.log(llo.replace('cricket', 'football'));
+
+        //trim() it is used to remove the spaces only 1 allowed
+        let na = "lkjlk    ljdlk   lkdslfk"
+        console.log(na.trim());
+
+        //include(subString);       used to check weather the substring is in the main string
+
+        let alll = "i love cricket";
+        console.log(alll.includes('cricket'));
+
+        //startWith(startString)    used to check weather the a string start with a given string
+        console.log(alll.startsWith('i'));
+
+        //endsWith      used to check weather the a string ends with a given string
+        console.log(alll.endsWith('t'));
+
+        //split(str);
+        console.log(alll.split())
+
+        //concat    used to concat sting
+        console.log(alll.concat(na));
+
+        // repeat
+        console.log(alll.repeat(4));     // print 5 times including main
+
+
+
+
+
+
+
+        //what ever the sting is make the first letter capital
+
+        // first way if all string 
+        let well = "welcome to all"
+        function CapitalizeFirst(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+        }
+        console.log(CapitalizeFirst(well));
+        //secton way
+        let str1 = "hello world";
+        console.log(str1.charAt(0).toUpperCase() + str1.slice(1));
+
+
+
+        //email validation 
+        function valid(str) {
+            return str.includes("@") && email.includes(".");
+        }
+        console.log(valid("te@st.home"))
+
+
+        //split
+        console.log(str1.split('o'));
+
+        //email masking
+
+        function maskingData(str){
+            return str.slice(-4).padStart(str.length,'*');         //padstart(max-lenth, conversion character)
+        }
+        console.log(maskingData("kekdjsssjdk"))
+
+        //Search method
+
+        const search = "galaxy";
+        const productName = "Samsung galaxy mobile phone";
+        if(productName.toLowerCase().includes(search.toLowerCase())){
+            document.write(productName);
+        }
+
+        //get domain name
+        function getDomainName(email){
+            return email.substring(email.indexOf('@')+1);
+        }
+        document.writeln(getDomainName("<br>hsdkfls@.com"));
+
+
+        //search method using array
+        const item = ['mobile','phone','set','pant','formalpant','casual','cap'];
+        const pName = "formal";
+        const filterd =item.filter(name => name.toLowerCase().includes(pName.toLowerCase()));       // filterd here act as an object not a variable to store multiple values
+        document.writeln("<br>",filterd);
+    </script>
+</body>
+
+</html>

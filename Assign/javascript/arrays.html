@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = ["name","age","color"];
+        array.push("host");     //array and string in js are immutable but we can update array cause array is treated as an object in js
+        console.log(array);
+
+        const arr = ["name","age","color"];
+        arr.push("host");
+        console.log(arr);
+        let name =` "hellow":"aew","toUpperCase":30`;
+        // arr.pop();
+        arr.shift()
+        arr.unshift("head")
+        console.log(arr.slice(1,3))
+        console.log(name)
+        console.log(arr);
+        console.log(arr.indexOf('age'))
+        
+        let element = document.createElement('div');
+        element.innerText = "hellow";
+        element.className = 'hellow';
+        element.style.backgroundColor = 'pink'
+        element.style.padding = '40px';
+
+        document.body.appendChild(element);
+
+        
+
+
+    </script>
+</body>
+</html>

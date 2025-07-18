@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+    .tooltip{
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black; 
+    }
+    .tooltip .tooltipText{
+        visibility: hidden;
+        width: 120px;
+        background:red;
+        color: white;
+        border-radius: 6px;
+        padding: 5px 0px;
+        position: absolute;
+        z-index: 1;
+        top: -5px;
+        left: 105%;
+        /* margin-left: -60px; */
+        /* transform: translateX(-50%); */
+    }
+    .tooltip:hover .tooltipText{
+        visibility: visible;
+    }
+</style>
+<body>
+    <h3>Move the mouse cursor here</h3>
+    <div class="tooltip">
+        hey guys fuck off
+        <span class="tooltipText">I am joking</span>
+    </div>
+</body>
+</html>

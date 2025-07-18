@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .avatar{
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        background: url('https://i.pravatar.cc/300') no-repeat center center/cover;
+        /* Marking effect: use a radial-gradient mask to simulate a circular highlight/mark */
+        mask-image: radial-gradient(circle at center, rgba(237, 26, 26, 0.7) 60%, transparent 90%);
+        -webkit-mask-image: radial-gradient(circle at center, rgba(145, 52, 52, 0.7) 60%, transparent 90%);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        transition: mask-image 0.5s ease;
+    }
+    .avatar:hover{
+        mask-image: 100% 0;
+        -webkit-mask-image: 100% 0;
+        background-color: black;
+        border-radius: 50%;
+    }
+</style>
+<body>
+    <div class="avatar"></div>
+</body>
+</html>

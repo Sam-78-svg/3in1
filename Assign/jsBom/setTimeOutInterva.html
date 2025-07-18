@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         setTimeout(() => {
+            document.writeln("Runs once after 2 seconds")   //once afet executon
+        }, 2000);
+
+        let stop = setInterval(() => {
+            document.writeln("Runs once after 2 seconds <br>")
+        }, 3000);
+        //to stop the interval
+
+
+        setTimeout(() => {
+             clearInterval(stop);
+        }, 15000);
+
+        setTimeout(() =>{
+            location.assign('./WindowScreen.html');
+        },5000)
+    </script>
+</body>
+</html>

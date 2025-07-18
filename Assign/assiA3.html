@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+</head>
+<body>
+    <nav style="display: flex; justify-content: space-between; align-items: center; background-color: #333; padding: 10px;">
+        <div style="color: white; font-size: 20px; font-weight: bold;">My Website</div>
+        <div style="display: flex; gap: 15px;">
+            <a href="#" style="color: white; text-decoration: none; padding: 10px; border-radius: 5px; transition: background-color 0.3s;">Home</a>
+            <a href="#" style="color: white; text-decoration: none; padding: 10px; border-radius: 5px; transition: background-color 0.3s;">About</a>
+            <a href="#" style="color: white; text-decoration: none; padding: 10px; border-radius: 5px; transition: background-color 0.3s;">Services</a>
+            <a href="#" style="color: white; text-decoration: none; padding: 10px; border-radius: 5px; transition: background-color 0.3s;">Contact</a>
+        </div>
+    </nav>
+
+    <style>
+        /* Hover effect for links */
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav div:nth-child(2) {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+    }
+    .column {
+        float: left;
+        width: 25%;
+        padding: 20PX;
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    @media  screen and (min-width: 1080px) {
+        .column {
+            width: 25%;
+        }
+        
+    }
+    @media  screen and (min-width: 800px) {
+        .column {
+            width: 50%;
+        }
+        
+    }
+    @media  screen and (max-width: 800px) {
+        .column {
+            width: 75%;
+        }
+        
+    }@media  screen and (max-width: 440px) {
+        .column {
+            width: 100%;
+        }
+        
+    }
+</style>
+<body>
+   <h1>Responsive column layout</h1> 
+   <div class="row">
+        <div class="column" style="background-color: green;">
+            <h2>column 1</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae facilis in nihil eligendi, aut accusamus excepturi maiores, neque odio sapiente numquam nobis minus, et perferendis unde quaerat. Distinctio, deleniti inventore.</p>
+        </div>
+        <div class="column" style="background-color: rgb(38, 84, 38);">
+            <h2>column 2</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae facilis in nihil eligendi, aut accusamus excepturi maiores, neque odio sapiente numquam nobis minus, et perferendis unde quaerat. Distinctio, deleniti inventore.</p>
+        </div>
+        <div class="column" style="background-color: rgb(2, 25, 2);">
+            <h2>column 3</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae facilis in nihil eligendi, aut accusamus excepturi maiores, neque odio sapiente numquam nobis minus, et perferendis unde quaerat. Distinctio, deleniti inventore.</p>
+        </div>
+        <div class="column" style="background-color: rgb(52, 68, 52);">
+            <h2>column 4</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae facilis in nihil eligendi, aut accusamus excepturi maiores, neque odio sapiente numquam nobis minus, et perferendis unde quaerat. Distinctio, deleniti inventore.</p>
+        </div>
+   </div>
+</body>
+</html>

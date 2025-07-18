@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isEligibleForVotling(birthDate){
+            let BirthDate = new Date(birthDate);
+            let todays = new Date();
+            let age = todays.getFullYear() - BirthDate.getFullYear();
+            let month = todays.getMonth() - BirthDate.getMonth();
+
+            if(month<0 || (month === 0 && todays.getDate() < BirthDate())){
+                age--;
+            }
+            return age>=18;
+        }
+        document.writeln(`<h1>${isEligibleForVotling('2005-05-10')}</h2>`)
+    </script>
+</body>
+</html>

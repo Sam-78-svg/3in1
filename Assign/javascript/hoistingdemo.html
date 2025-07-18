@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="addToCart()">
+    <h1>Shop here</h1>
+        <ul class="cart">
+            <li data-price="20000">
+                vivo a50 ₹20000 <button onclick="removeItem(this)">Remove</button>
+            </li>
+             <li data-price="2010">
+                TFT display 6.5 inch ₹2010 <button onclick="removeItem(this)">Remove</button>
+            </li>
+             <li data-price="7000">
+                Nike Std30 ₹7000 <button onclick="removeItem(this)">Remove</button>
+            </li>
+             <li data-price="200">
+                nazo t-shirt ₹200 <button onclick="removeItem(this)">Remove</button>
+            </li>
+        </ul>
+        <br>
+        <div>
+            <input type="text" id="product-name" placeholder="Product Name">
+            <input type="number" id="product-price" placeholder="Product Price">
+            <button onclick="add()">Add Product</button>
+        </div>
+        <br>
+        <br>
+        <h3>Your total is: <span>0</span></h3>
+    <script>
+      function addToCart(){
+          const products = document.querySelectorAll('.cart li');
+        const totalSpan = document.querySelector('h3 span');
+        let total = 0;  
+        products.forEach(product =>{
+            let price = parseInt(product.getAttribute('data-price'));
+            total += price;
+            totalSpan.innerHTML = total;
+
+        });
+        return total;
+      }
+        
+        function removeItem(button){
+            const item = button.parentElement;
+            item.remove();
+            addToCart();
+        }
+
+        function add() {
+            const productName = document.getElementById('product-name').value;
+            const productPrice = document.getElementById('product-price').value;
+
+            if (productName && productPrice) {
+                const li = document.createElement('li');
+                li.setAttribute('data-price', productPrice);
+                li.innerHTML = `${productName} ₹${productPrice} <button onclick="removeItem(this)">Remove</button>`;
+                document.querySelector('.cart').appendChild(li);
+                addToCart(); // Update total after adding new item
+            } else {
+                alert('Please enter both product name and price.');
+            }
+        }
+
+    </script>
+</body>
+</html>

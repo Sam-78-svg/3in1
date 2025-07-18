@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- regular expession is a sequence of character that is used to mach a pattern in string -->
+
+</body>
+<script>
+    // 1 search pattern
+    // 2 string.prototype.match()
+    // 3 string.prototype.replace()
+    // 4 string.prototype.search()
+    // 5 string.prototype.split()
+
+    //syntax: const var_name = / Pattern /flags;
+    //syntas: const regex = new RegEx('pattern','flags')
+
+    // flags
+    // g as flag = Globel search (find all matches)(single line)
+    // i as flag = case sensitive search(single line)
+    // m as flag = multiline mode
+
+    //symbol
+    // . any character
+    // ^ start string
+    // $ end of string
+    // * 0 or more time
+    // + 1 or more
+    // ? 0 or 1 time
+    // [] Character set
+    // {n} exactly n times means any number of time or {n,} minimu n times
+    // {n,m} exactly n to m atleast n and maximum m
+    // () grouping
+    // \ escape special character
+
+    //predefined
+    // \d digit[0-9]
+    // \D non-zero[1-9]
+    // \w word character[a-zA-Z0-9]
+    // \W special symbols only
+    // \s white space allowed
+    // \S white space not allowed 
+
+
+    const name = /^[a-zA-Z0-9._]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+    console.log(name.test('abcd@gmail.com'));
+    const pass = /^(?=.*[\w])(?=.*[A-Z])(?=.*\d)(?=.*\W).{6,15}$/
+    console.log(pass.test("Sangam@91"));
+    const atm = /^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/;
+    console.log(atm.test("1230-2123-2112-2121"));
+
+
+
+</script>
+</html>

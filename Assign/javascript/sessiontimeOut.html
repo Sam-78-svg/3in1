@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sessionMsg"></div>
+    <div id="otpMsg"></div>
+    <script>
+        let lastLogin = new Date();
+
+        function checkSessionTime() {
+            let now = new Date();
+            let differenceSec = (now - lastLogin) / 1000; // difference in seconds
+
+            let msg = "";
+            if (differenceSec > 10) {
+                msg = "auto logout Due to inactivity";
+            } else {
+                msg = "still connected";
+            }
+            document.getElementById("sessionMsg").innerText = msg;
+        }
+
+        // Check session every 2 seconds for demo
+        setInterval(checkSessionTime, 2000);
+
+        // OTP timer
+        let otpValid = true;
+        document.getElementById("otpMsg").innerText = "OTP is valid";
+
+        setTimeout(function () {
+            otpValid = false;
+            document.getElementById("otpMsg").innerText = "OTP has expired";
+        }, 20000); // 20 seconds
+    </script>
+</body>
+</html>

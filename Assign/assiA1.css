@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(/pexels-sohi-807598.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+Nav{
+    margin-top: 10px;
+    display: flex;
+    height: 7rem;
+    align-items: center;
+    background-color: antiquewhite;
+}
+#lNa{
+    height: 100%;
+    width: 35%;
+    padding: 10px;
+}
+#lNa img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#rNa{
+    height: 100%;
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.0rem;
+    font-weight: bold;
+    color: #333;
+}
+#rNa a{
+    text-decoration: none;
+    color: #333;
+}
+#rNa a:hover{
+    color: #000;
+}
+#Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#leCon{
+    width: 50%;
+    height: 70%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    flex-direction: column;
+}
+#leCon section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.social{
+    width: 60%;
+    cursor: pointer;
+    height: 40%;
+    margin-right: 10px;
+}
+#reCon{
+    width: 50%;
+    height: 70%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    flex-direction: column;
+}
+#reCon img{
+    width: 100%;
+    height: 70%;
+    mixed-blend-mode: multiply;
+    filter: brightness(0.8);
+    object-fit: contain;  
+}
+.skill{
+    height: 60px;
+    width: 7%;
+    cursor: pointer;
+    border-radius: 25%;
+    padding: 2px;
+    margin: 10px;
+    border: 1px solid #333;
+}
+#leCon2{
+    width: 50%;
+    height: 70%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    flex-direction: column;
+}
+#leCon2 section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+marquee{
+    background-color: bisque;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#reCon2{
+    width: 50%;
+    height: 70%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    flex-direction: column;
+}
+#reCon2 section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#reCon2 section a{
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+}

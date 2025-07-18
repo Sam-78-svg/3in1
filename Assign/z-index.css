@@ -1,0 +1,39 @@
+body{
+    margin: 0ps;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    background: #222;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-weight: bold;
+    font-size: 25px;
+}
+.menubar{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.menubar li{
+    position: relative;
+    cursor: pointer;
+}
+.ddmenu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    color: black;
+    list-style: none;
+    padding: 0.5rem 0;
+    display: none;
+    z-index: 20;
+}

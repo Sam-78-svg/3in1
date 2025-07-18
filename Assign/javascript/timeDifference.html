@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let start = new Date('2025-07-14');
+        let today = new Date();
+
+        let difference = start - today;
+        //milliseconds
+        document.writeln(`<h3>Milliseconds:${difference}</h3>`);
+        //seconds
+        difference /= 1000;
+        document.writeln(`<h3>Seconds:${difference}</h3>`);
+        //minutes
+        difference /= 60;
+        document.writeln(`<h3>Minutes:${difference}</h3>`);
+        //hours
+        difference /= 60;
+        document.writeln(`<h3>Hours:${difference}</h3>`);
+        //days
+        difference/=24;
+        console.log(difference);
+        document.writeln(`<h3>Days:${difference.toFixed(1)}</h3>`);     
+        //foFixed() used to of fix numbers after floating point
+
+
+        //Birthday calculation
+        let birt = new Date('2005-05-10');
+        let todays = new Date();
+
+        let age = today - birt;
+        age=(((age/1000)/60)/60)/24;
+        // age/=1000;
+        // age/=60;
+        // age/=60;
+        // age/=24;
+
+        document.writeln(`<h1>You have Lived:${age.toFixed(1)}</h1>`);
+    </script>
+</body>
+
+</html>

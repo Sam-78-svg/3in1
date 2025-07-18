@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Current Date and Time:<span id="todayDate"></Date:span></h2>
+    <script>
+
+        //date object examples the Date() is an object in js
+        //date Constructor
+                // 1 Date() returned(dayame, monthName, date, year,hour,minute,seconds,millisecods,timeZone,Ist)
+                        var Date = new Date();
+                        const date = document.querySelector('#todayDate');
+                        // date.innerHTML=Date; 
+
+                // 2 Date(milliseconds) 1=1000ms
+                // 3 Date(dateString) 
+                // 4 Date(year-month-date-hour-minute-seconds-ms)
+                
+        //date Methods
+                //getDate(1-31); in numaric dateonly
+                console.log(Date.getDate());
+                //getDay(0-6);  in numaric dayonly (monday - sunday)
+                console.log(Date.getDay())
+                //getMonth(0-11) in numaric month (jan - dec)
+                console.log(Date.getMonth());
+                //getFullYear() 
+                console.log(Date.getFullYear());
+                date.innerHTML = Date.getDay()+1+'/'+ Date.getMonth()+1+'/'+Date.getFullYear();
+                //getHours(0-23) in number 
+                //getMinute(0-59) in number
+                //getSeconds(-59) in number
+                //getMilliseconds(0-9999) in number
+                
+                //use set to set new methods as above
+
+
+    </script>
+</body>
+</html>

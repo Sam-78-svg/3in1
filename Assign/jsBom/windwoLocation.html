@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let dt = new Date();
+        document.writeln(dt);
+        document.writeln(location.hostname + '<br>');
+        document.writeln(location.host + '<br>');
+        document.writeln(location.pathname + '<br>');
+        document.writeln(location.href + '<br>');
+        // document.writeln(location.reload() + '<br>');
+        // setTimeout(() => {
+        //     location.reload();
+        // }, 2000);
+
+        setTimeout(() => {
+            location.assign('https://www.google.com/');
+        }, 3000);
+
+    </script>
+</body>
+
+</html>

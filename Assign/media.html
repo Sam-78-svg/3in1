@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+    }
+    .header{
+        padding: 60px;
+        text-align: center;
+        background-color:bisque;
+        color: white;
+    }
+    .navbar{
+        display: flex;
+        background-color: aquamarine;
+    }
+    .navbar a{
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+    }
+    .navbar a:hover{
+        background-color: #333;
+        color: white;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .side{
+        flex: 30%; /* out of 100%; */
+        background-color: #f1f1f1;
+        padding: 20px;
+    }
+    .main{
+        flex: 70%; /* out of 100%; */
+        background-color: white;
+        padding: 20px;
+    }
+    .myimage{
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+    }
+    .footer{
+        padding: 20px;
+        text-align: center;
+        background-color: antiquewhite;
+    }
+
+    @media screen and (max-width: 700px) {
+        .row, .navbar{
+            flex-direction: column ;
+        }
+        
+    }
+</style>
+<body>
+    <div style="background-color: yellow;padding: 5px;">
+        <h3 style="text-align: center;">wilcome to home</h3>
+    </div>
+    <div class="header">
+        <h1>xpe mapmdfjl</h1>
+        <p>with a <strong>stylas pen</strong></p>
+    </div>
+    <div class="navbar">
+        <a href="#" class="anchor">Home</a>
+        <a href="#" class="anchor">About</a>
+        <a href="#" class="anchor">Services</a>
+        <a href="#" class="anchor">Contact</a>
+        <a href="#" class="anchor">Blog</a>
+    </div>
+    <div class="row">
+        <div class="side">
+            <h2>about us </h2>
+            <h5>info about us</h5>
+            <div class="myimage" style="height: 200px;">
+                image
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum harum assumenda neque alias illo natus maiores. </p>
+            <h3>more about us</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <div class="myimage" style="height: 60px;">
+                image
+            </div> <div class="myimage" style="height: 60px;">
+                image
+            </div> <div class="myimage" style="height: 60px;">
+                image
+            </div>
+        </div>
+        <div class="main">
+            <h2>Title heading</h2>
+            <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, magni!s</h5>
+            <div class="myimage" style="height: 200px;">
+
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, quas.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est suscipit dolorum consequuntur mollitia sint saepe facere error rerum quo.</p>
+            <br>
+            <h2>title heading2</h2>
+             <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, magni!s</h5>
+            <div class="myimage" style="height: 200px;">
+
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, quas.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est suscipit dolorum consequuntur mollitia sint saepe facere error rerum quo.</p>
+            <br>
+
+        </div>
+    </div>
+    <div class="footer">
+        <h2>&copy; 2023</h2>
+    </div>
+</body>
+</html>

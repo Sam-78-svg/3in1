@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class bankAccount{
+            balance = 0;
+            constructor(accountHolder){
+                this.accountHolder = accountHolder; //this is used to make a localvariable as global variable
+                document.write(`Account created for: ${this.accountHolder} <br>`);
+
+            }
+            deposite(amount){
+                if(amount>0){
+                    this.balance+=amount;
+                    document.write(`Deposited Rs.${amount} <br>`);
+                }
+            }
+            withdraw(amount){
+                if(amount<=this.balance){
+                    this.balance-=amount;
+                    document.write(`Withdrawn Rs.${amount} <br>`);
+                }else{
+                    document.write(`Insufficient balance or invalid amount <br>`);
+                }
+            }   
+            getBalance(){
+                return this.balance;
+            }
+        }
+        let ba = new bankAccount("John Doe");
+        ba.deposite(21000);
+        ba.withdraw(500);
+        document.write(`Current Balance: Rs.${ba.getBalance()}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .place {
+        border: 2px solid black;
+        padding: 10px 12px;
+        width: auto;
+        height: auto;
+    }
+</style>
+
+<body>
+    <div id="searchBox">
+        <input type="search" id="searchHere">
+        <p id="para"></p>
+    </div> <label for="city">Choose a city:</label>
+    <input list="cities" id="city" name="city">
+    <datalist id="cities">
+        <option value="Mumbai">
+        <option value="Pune">
+        <option value="Latur">
+        <option value="Kolhapur">
+        <option value="Solapur">
+        <option value="Nanded">
+        <option value="Thane">
+        <option value="Palghar">
+    </datalist>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const input = document.querySelector('#searchHere');
+            const place = document.querySelector('#para');
+
+            let arr = ['Mumbai', 'Pune', 'Latur', 'Kolhaput', 'Solapur', 'Nanded', 'Thane', 'Plaghar'];
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    place.innerHTML = '';
+                    let match = arr.filter(item => item.toLowerCase().includes(input.value.toLowerCase()));
+                    match.forEach(variable => {
+                        place.classList = 'place';
+                        place.innerHTML += `<p>${variable}</p>`;
+                    });
+                };
+            });
+        });
+
+    </script>
+</body>
+
+</html>

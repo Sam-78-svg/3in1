@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let choice;
+        do {
+            console.log("\n main menu")
+            console.log("\n 1. view Products")
+            console.log("\n 2. view Orders")
+            console.log("\n 3. view Payment history")
+            console.log("\n 4. view Cart")
+            console.log("\n 5. Exit")
+            if(!choice){
+                choice = 1;
+            }else if(choice == 1){
+                choice = 2;
+            }else if(choice == 2){          
+                choice = 3;
+            }else if(choice == 3){
+                choice = 4;
+            }else{
+                choice = 5;
+            }
+
+            switch(choice){
+                case 1:
+                    console.log("showing products");
+                    break;
+                case 2:
+                    console.log("showing orders");
+                    break;
+                case 3: 
+                    console.log("View Payment history");
+                    break;
+                case 4: 
+                    console.log("Showing Cart");
+                    break;
+                case 5: 
+                    console.log("Exit");
+                    break;
+                default: 
+                    console.log("choice error")
+            }
+        } while (choice!=5);
+    </script>
+
+</body>
+
+</html>

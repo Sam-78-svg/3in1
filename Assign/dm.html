@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #cord{
+        border: 2px solid black;
+        text-align: center;
+    }
+    #container{
+        padding: 10px;
+        display: grid;
+        border: 2px solid orange;
+        grid-template-columns:1fr 1fr ;
+        grid-template-rows: auto auto;
+        gap: 10px;
+    }
+    #container2{
+        padding: 10px;
+        margin-top: 10px;
+        /* display: inline;        block and inline are like same but in inline we cannot specify hight but in block we can */
+        display: block;
+        height: 20px;
+        width: 100px;
+    }
+</style>
+<body>
+    <div id="container">
+        <div id="cord">card1</div>
+        <div id="cord">card2</div>
+        <div id="cord">card3</div>
+        <div id="cord">card4</div>
+    </div>
+     <div id="container2">
+        <div id="cord">card1</div>
+        <div id="cord">card2</div>
+        <div id="cord">card3</div>
+        <div id="cord">card4</div>
+    </div>
+</body>
+</html>

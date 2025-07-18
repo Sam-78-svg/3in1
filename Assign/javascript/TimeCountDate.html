@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function countDown(targetDate) {
+            let now = new Date();
+            let Deff = new Date(targetDate) - now;
+
+            if (Deff > 0) {
+                let days = Math.floor(Deff / (1000 * 60 * 60 * 24));
+                document.writeln(`<h2>${days} days left </h2>`);
+            } else {
+                document.writeln(`<h2>${days} has passed</h2>`);
+            }
+        }
+        countDown('2031-03-11');
+
+
+
+
+
+
+
+
+
+        function countAge(birth) {
+            let today = new Date();
+            let diff = today-new Date(birth);
+            if (diff>0) {
+                let days = Math.floor(diff/(1000*60*60*24));
+                document.writeln(`<h2>Day yet to come: ${days}.`);
+            } else {
+                document.writeln(`<h2 Day has passed: ${days}.`);
+            }
+        }
+        let date = prompt('Enter your desired date yyyy-mm-dd');
+        countAge(date);
+
+        document.createElement
+    </script>
+</body>
+
+</html>

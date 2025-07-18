@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="sessionMsg"></div>
+    <div id="otpMsg"></div>
+    <script>
+        // let lastLogin = new Date();
+
+        // function checkSessionTime() {
+        //     let now = new Date();
+        //     let deffernceMinut = (now - lastLogin) / (1000);
+        //     let msg = "";
+        //     if (deffernceMinut > 10) {
+        //         msg = "auto logout Due to inactivity"
+        //     } else {
+        //         msg = "still connected";
+        //     }
+        //     document.getElementById('sessionMsg').innerHTML = msg;
+        // }
+        // setInterval(() => {
+        //     console.log("connection valid")
+        //     checkSessionTime();
+        // }, 2000);
+
+
+
+
+
+        //make program to show message otp has expired after 20seconds otp valid or invalid
+        let lastSessionTime = new Date();
+        document.getElementById('otpMsg').innerHTML = 'OTP sent'
+
+        function ExpiryTime() {
+            let newDate = new Date();
+            let diff = (newDate - lastSessionTime) / 1000;
+            if (diff > 20) {
+                document.getElementById('otpMsg').innerHTML = 'OTP Expired';
+                callButton();
+            } else {
+                document.getElementById('sessionMsg').innerHTML = 'Enter The OTP';
+            }
+        }
+        setInterval(() => {
+            ExpiryTime();
+        }, 2000)
+        function callButton() {
+            let btn = document.createElement('button');
+            btn.innerHTML = 'Resend OTP'
+            document.getElementById('otpMsg').appendChild(btn);
+            return btn;
+        }
+        callButton().addEventListener('click',()=>{
+            ExpiryTime();
+        })
+    </script>
+    <script>
+
+    </script>
+</body>
+
+</html>
