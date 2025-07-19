@@ -10,9 +10,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
 </head>
 
-<body>
+<body style="background-color: #a1d1b1;">
     <!-- Navbars Section -->
     <nav class="navbar navbar-expand-sm bg-primary sticky-top p-2">
         <div class="container-fluid brandNamw d-block m-auto" style="width: 20%;">
@@ -42,64 +43,103 @@
 
     <!-- Main section Start here -->
     <main>
-        <!-- signup page -->
-        <div class="overlay" id="overlay2">
-            <div class="popup">
-                <span class="close-btn btn-close" id="close-popup"></span>
-                <h2 class="text-primary text-center">Sign up</h2>
-                <form action="#">
-                    <div class="mb-3">
-                        <label for="Name" class="form-label">Name:</label>
-                        <input type="text" id="Name" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="userName" class="form-label">Create Username:</label>
-                        <input type="text" id="userName" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" id="email" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="Password" class="form-label">Password:</label>
-                        <input type="password" id="Password" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="confirmPassword" class="form-label">Confirm Password:</label>
-                        <input type="password" id="confirmPassword" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <button class="btn btn-outline-primary d-grid col-md-3 " type="submit">Submit</button>
-                        <p class="text-center">Already have and account | <a href="#" id="signin-btn"
-                                style="text-decoration: none;">Sign-in</a>
-                        </p>
-                    </div>
-
-
-                </form>
-            </div>
-        </div>
-        <!-- signup page end -->
+        <!-- Sign in area -->
         <div class="overlay" id="overlay">
             <div class="popup">
                 <span class="close-btn btn-close" id="close-popup1"></span>
-                <h2 class="text-primary text-center">Sign in</h2>
-                <form action="#" id="signin-form">
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" id="username" placeholder="Username" required>
-                    <label for="password">Password:</label>
-                    <input type="text" name="password" id="userPassword" required placeholder="Password">
-                    <button class="btn btn-outline-primary d-grid col-md-3 " type="submit">Submit</button>
-                    <p class="text-center">Create account | <a href="#" id="signup-btn"
-                            style="text-decoration: none;">Sign-up</a></p>
+                <form action="#" class="form-content">
+                    <h1 style="text-align: center; margin: 0; padding: 0">Sign In</h1>
+                    <div id="username" class="login">
+                        <label for="username">UserName:</label>
+                        <span style="display: flex; gap: 0; border-bottom: 4px solid black"><input type="text"
+                                name="username" style="display: inline-flex" id="username" />
+                            <span style="display: inline-flex; font-size: 20px; cursor: pointer">🤵</span></span>
+                    </div>
+                    <div class="login" id="password">
+                        <label for="Password">Password:</label>
+                        <span style="display: flex; gap: 0; border-bottom: 4px solid black"><input type="password"
+                                name="password" style="display: inline-flex" id="Password" />
+                            <span id="hideIcon"
+                                style="display: inline-flex; font-size: 20px; cursor: pointer">🤦‍♂️</span></span>
+                    </div>
+                    <br />
+                    <button type="submit" id="button">Submit</button>
+                    <p class="text-center">Create a New Accoun | <a href="#" id="signup-btn"
+                            style="text-decoration: none;">Sign
+                            UP</a></p>
                 </form>
             </div>
         </div>
-        <div class="main container p-md-4 accordion" id="accordionExample">
+        <!-- Sign in area end -->
+
+        <!-- Sign up area -->
+        <div class="overlayz" id="overlay2">
+            <div class="popup">
+                <span class="close-btn btn-close" id="close-popup"></span>
+                <h2 class="text-primary text-center">Sign Up</h2>
+                <form action="#" class="form-content">
+                    <div id="username" class="login">
+                        <label for="username">UserName:</label>
+                        <span style="display: flex; gap: 0; border-bottom: 4px solid black"><input type="text"
+                                name="username" style="display: inline-flex" id="username" placeholder="" />
+                            <span style="display: inline-flex; font-size: 20px; cursor: pointer">🤵</span></span>
+                    </div>
+                    <div id="emailArea" class="login">
+                        <label for="email">Email:</label>
+                        <span style="display: flex; gap: 0; border-bottom: 4px solid black"><input type="text"
+                                name="userEmail" style="display: inline-flex" id="email" />
+                            <span style="display: inline-flex; font-size: 20px; cursor: pointer">📧</span></span>
+                    </div>
+                    <div class="login" id="password">
+                        <label for="Password">Password:</label>
+                        <span style="display: flex; gap: 0; border-bottom: 4px solid black"><input type="password"
+                                name="password" style="display: inline-flex" id="Password2" />
+                            <span id="hideIcon2"
+                                style="display: inline-flex; font-size: 20px; cursor: pointer">🤦‍♂️</span></span>
+                    </div>
+                    <div class="login" id="conPassword">
+                        <label for="conPassword">Confirm Password:</label>
+                        <span style="display: flex; gap: 0; border-bottom: 4px solid black"><input type="password"
+                                name="conPassword" style="display: inline-flex" id="conPassword" />
+                            <span id="hideConPass"
+                                style="display: inline-flex; font-size: 20px; cursor: pointer">🤦‍♂️</span></span>
+                    </div>
+                    <button class="btn btn-outline-primary d-grid col-md-3" type="submit">
+                        Submit
+                    </button>
+                    <p class="text-center">
+                        Already Have an Account |
+                        <a href="#" id="signin-btn" style="text-decoration: none">Sign-in</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <!-- Sign up area end -->
+        <div class="border border-primary bg-light d-flex flex-md-row flex-column flex-md-row mt-5 p-5 rounded-2" style="width: 96vw; transform: translateX(1.5vw);">
+            <div class="right bg-transparent rounded-2 p-1" style="width: 50%;">
+                <h1>About us</h1>
+                <h4 class="text-muted fst-italic">Get the Internation Standard IT Solution</h4>
+                <p class="h5 text-">
+                    Hisen.co is a leading IT solutions company dedicated to empowering businesses with innovative and
+                    tailored technology. We specialize in delivering a comprehensive suite of services, including
+                    Web Development,Website Designing,SEO Optimization,etc, custom software development, cloud integration, cybersecurity, data
+                    analytics, IT consulting], designed to optimize operations, enhance efficiency, and drive growth.
+                    Our team of expert professionals leverages cutting-edge technologies and a deep understanding of
+                    industry-specific challenges to craft robust and scalable solutions that align perfectly with our
+                    clients' strategic objectives. At Hisen.co, we are committed to building long-term partnerships,
+                    providing unparalleled support, and ensuring that our clients are always at the forefront of
+                    technological advancement.
+                </p>
+            </div>
+            <div class="left d-flex align-items-center justify-content-center" style="width: 50%; padding-bottom: 2rem;">
+                <img src="./imgs/about.jpg" alt="Discussion" style="height: auto;width: 70%; object-fit: contain;">
+            </div>
+        </div>
+        <div class="main container-fluid p-md-4 accordion" id="accordionExample">
             <div class="accordion-item">
                 <h1 class="accordion-header">
-                    <button class="btn h1 fw-bold fs-2 accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                        type="button">What is Hisec.com ?</button>
+                    <button class="btn h1 fw-bold fs-2 accordion-button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" type="button">What is Hisec.com ?</button>
                 </h1>
                 <div class="accordion-collapse collapse show" id="collapseOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
@@ -113,13 +153,15 @@
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="btn h1 fw-bold fs-2 accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                        type="button" aria-controls="collapseTwo" aria-expanded="false">What Services do we provide ?</button>
+                    <button class="btn h1 fw-bold fs-2 accordion-button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" type="button" aria-controls="collapseTwo"
+                        aria-expanded="false">What Services do we provide ?</button>
                 </h2>
                 <div class="accordion-collapse collapse" id="collapseTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <p class="text-muted fs-5">At Hisen.co, we offer a wide range of digital services to help businesses succeed online. Our services include:</p>
-                        <ul class="text-muted fs-5">
+                        <p class="text-muted fs-5">At Hisen.co, we offer a wide range of digital services to help
+                            businesses succeed online. Our services include:</p>
+                        <ul class="text-muted fs-5" id="services-list">
                             <li>Web Development</li>
                             <li>Mobile App Development</li>
                             <li>Digital Marketing</li>
@@ -131,13 +173,15 @@
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="btn p-3  fw-bold fs-2 accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                        type="button">What is Our Mission ?</button>
+                    <button class="btn p-3  fw-bold fs-2 accordion-button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" type="button">What is Our Mission ?</button>
                 </h2>
                 <div class="accordion-collapse collapse" id="collapseThree" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <p class="text-muted fs-5">At Hisen.co, our mission is to empower our clients by providing innovative and
-                            effective digital solutions. We strive to deliver high-quality services that drive results and help our
+                        <p class="text-muted fs-5">At Hisen.co, our mission is to empower our clients by providing
+                            innovative and
+                            effective digital solutions. We strive to deliver high-quality services that drive results
+                            and help our
                             clients achieve their goals.</p>
                     </div>
                 </div>

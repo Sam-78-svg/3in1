@@ -11,19 +11,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
-    #toolt:hover .tooltText{
+    #toolt:hover .tooltText {
         visibility: visible;
     }
 </style>
 
 <body>
-    <div class="position-fixed p-3 bg-secondary badge d-flex flex-column toolt" style="right: 6px;bottom: 20px; border-radius: 50%;" onmouseover="document.getElementsByClassName('tooltText').style.visibility = 'visible'">
+    <div class="position-fixed p-3 bg-secondary badge d-flex flex-column toolt"
+        style="right: 6px;bottom: 20px; border-radius: 50%;"
+        onmouseover="document.getElementsByClassName('tooltText').style.visibility = 'visible'">
         <div>
-            <a href="#" class="fw-bold fs-5"  style="text-decoration: none;color: aliceblue;">
+            <a href="#" class="fw-bold fs-5" style="text-decoration: none;color: aliceblue;">
                 <i class="fa fa-arrow-up" aria-hidden="true"></i>
             </a>
         </div>
-        <p class="tooltText text-dark fs-5" style="visibility:hidden;position: absolute;z-index: -1;top: 100%;right:0;">Name</p>
+        <p class="tooltText text-dark fs-5" style="visibility:hidden;position: absolute;z-index: -1;top: 100%;right:0;">
+            Name</p>
     </div>
 
 
@@ -56,6 +59,78 @@
 
     <!-- Main Section -->
     <main style="padding: 1rem;">
+        <!-- Sign in area -->
+        <div class="overlay" id="overlay">
+            <div class="popup">
+                <span class="close-btn btn-close" id="close-popup1"></span>
+                <form action="#" class="form-content">
+                    <h1 style="text-align: center; margin: 0; padding: 0">Sign In</h1>
+                    <div id="username" class="login">
+                        <label for="username">UserName:</label>
+                        <span style="display: flex; gap: 0; border-bottom: 4px solid black"><input type="text"
+                                name="username" style="display: inline-flex" id="username" />
+                            <span style="display: inline-flex; font-size: 20px; cursor: pointer">🤵</span></span>
+                    </div>
+                    <div class="login" id="password">
+                        <label for="Password">Password:</label>
+                        <span style="display: flex; gap: 0; border-bottom: 4px solid black"><input type="password"
+                                name="password" style="display: inline-flex" id="Password" />
+                            <span id="hideIcon"
+                                style="display: inline-flex; font-size: 20px; cursor: pointer">🤦‍♂️</span></span>
+                    </div>
+                    <br />
+                    <button type="submit" id="button">Submit</button>
+                    <p class="text-center">Create a New Accoun | <a href="#" id="signup-btn"
+                            style="text-decoration: none;">Sign
+                            UP</a></p>
+                </form>
+            </div>
+        </div>
+        <!-- Sign in area end -->
+
+        <!-- Sign up area -->
+        <div class="overlayz" id="overlay2">
+            <div class="popup">
+                <span class="close-btn btn-close" id="close-popup"></span>
+                <h2 class="text-primary text-center">Sign Up</h2>
+                <form action="#" class="form-content">
+                    <div id="username" class="login">
+                        <label for="username">UserName:</label>
+                        <span style="display: flex; gap: 0; border-bottom: 4px solid black"><input type="text"
+                                name="username" style="display: inline-flex" id="username" placeholder="" />
+                            <span style="display: inline-flex; font-size: 20px; cursor: pointer">🤵</span></span>
+                    </div>
+                    <div id="emailArea" class="login">
+                        <label for="email">Email:</label>
+                        <span style="display: flex; gap: 0; border-bottom: 4px solid black"><input type="text"
+                                name="userEmail" style="display: inline-flex" id="email" />
+                            <span style="display: inline-flex; font-size: 20px; cursor: pointer">📧</span></span>
+                    </div>
+                    <div class="login" id="password">
+                        <label for="Password">Password:</label>
+                        <span style="display: flex; gap: 0; border-bottom: 4px solid black"><input type="password"
+                                name="password" style="display: inline-flex" id="Password2" />
+                            <span id="hideIcon2"
+                                style="display: inline-flex; font-size: 20px; cursor: pointer">🤦‍♂️</span></span>
+                    </div>
+                    <div class="login" id="conPassword">
+                        <label for="conPassword">Confirm Password:</label>
+                        <span style="display: flex; gap: 0; border-bottom: 4px solid black"><input type="password"
+                                name="conPassword" style="display: inline-flex" id="conPassword" />
+                            <span id="hideConPass"
+                                style="display: inline-flex; font-size: 20px; cursor: pointer">🤦‍♂️</span></span>
+                    </div>
+                    <button class="btn btn-outline-primary d-grid col-md-3" type="submit">
+                        Submit
+                    </button>
+                    <p class="text-center">
+                        Already Have an Account |
+                        <a href="#" id="signin-btn" style="text-decoration: none">Sign-in</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <!-- Sign up area end -->
         <!-- Fieldset -->
         <h1 class="h1 text-center text-primary-emphasis mb-3">Start a New Project</h1>
         <form action="#">
