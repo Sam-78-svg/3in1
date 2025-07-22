@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - E-Commerce</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f6f6f6; }
+        header { background: #222; color: #fff; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.7rem; font-weight: bold; letter-spacing: 2px; }
+        nav a { color: #fff; text-decoration: none; margin: 0 1rem; font-size: 1rem; }
+        nav a:hover { text-decoration: underline; }
+        .hero { background: #4f8cff; color: #fff; padding: 2.5rem 2rem; text-align: center; }
+        .hero h1 { margin: 0 0 0.5rem; font-size: 2.5rem; }
+        .hero p { margin: 0 0 1.5rem; font-size: 1.2rem; }
+        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; padding: 2rem; max-width: 1200px; margin: 0 auto; }
+        .product { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px #0001; padding: 1.2rem; text-align: center; transition: box-shadow 0.2s; }
+        .product:hover { box-shadow: 0 4px 16px #0002; }
+        .product img { width: 100%; max-width: 180px; height: 160px; object-fit: contain; margin-bottom: 1rem; }
+        .product-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .product-price { color: #4f8cff; font-size: 1.1rem; margin-bottom: 1rem; }
+        .add-cart { background: #4f8cff; color: #fff; border: none; padding: 0.6rem 1.2rem; border-radius: 5px; cursor: pointer; font-size: 1rem; transition: background 0.2s; }
+        .add-cart:hover { background: #2563eb; }
+        footer { background: #222; color: #fff; text-align: center; padding: 1rem 0; margin-top: 2rem; }
+        @media (max-width: 600px) {
+            .products { padding: 1rem; gap: 1rem; }
+            header, .hero { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ShopEase</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#products">Products</a>
+            <a href="#cart">Cart</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Welcome to ShopEase</h1>
+        <p>Your one-stop shop for the latest and greatest products!</p>
+        <a href="#products" class="add-cart" style="text-decoration:none;">Shop Now</a>
+    </section>
+    <section class="products" id="products">
+        <div class="product">
+            <img src="Assignments/resource images/js.png" alt="Product 1">
+            <div class="product-title">JavaScript T-Shirt</div>
+            <div class="product-price">₹499</div>
+            <button class="add-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="Assignments/resource images/html.png" alt="Product 2">
+            <div class="product-title">HTML5 Mug</div>
+            <div class="product-price">₹299</div>
+            <button class="add-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="Assignments/resource images/css.webp" alt="Product 3">
+            <div class="product-title">CSS Sticker Pack</div>
+            <div class="product-price">₹199</div>
+            <button class="add-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="Assignments/resource images/Pyth.png" alt="Product 4">
+            <div class="product-title">Python Notebook</div>
+            <div class="product-price">₹399</div>
+            <button class="add-cart">Add to Cart</button>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 ShopEase. All rights reserved.
+    </footer>
+</body>
+</html>
