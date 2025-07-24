@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function newData(userId) {
+            try {
+                return fetch(`https://jsonplaceholder.typicode.com/comments/${userId}`)
+                    .then(res => {
+                        if (!res.ok) {
+                            throw new Error('User not found');
+                        }
+                        return res.json();
+                    })
+            }
+            catch (err) {
+                alert(err.message + 'error')
+            }
+        }
+        let html = '';
+        for (let i = 1; i <= 40; i++) {
+            try {
+                newData(i)
+                    .then(res => {
+                        console.log("Data:", res);
+                        html = `<div>
+                                     <h4>
+                                         postId = ${res.postId}<br>
+                                         id = ${res.id}<br>
+                                         name = ${res.name}<br>
+                                         email = ${res.email}<br>
+                                         body = ${res.body}<br>
+                                     </h4>
+                                 </div><hr>`;
+                        document.body.innerHTML += html;        // it will not allow data overwrite and will append data to next line
+                    })
+                    .catch(err => {
+                        console.error(err.message);
+                    })
+                document.body.innerHTML += html;
+            }
+            catch (err) {
+                console.error("Error:", err.message);
+            }
+        }
+    </script>
+</body>
+
+</html>

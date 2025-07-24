@@ -137,6 +137,23 @@ function showSuccess(input) {
     }
 }
 
+// Debounce function
+function debounce(fn, delay = 400) {
+    let timeoutId;
+    return function(...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => fn.apply(this, args), delay);
+    };
+}
+
+// Attach debounced validation to input events
+firstnameEl.addEventListener('input', debounce(checkFirstName));
+lastnameEl.addEventListener('input', debounce(checkLastName));
+usernameEl.addEventListener('input', debounce(checkUserName));
+emailEl.addEventListener('input', debounce(checkEmail));
+passwordEl.addEventListener('input', debounce(checkPassword));
+conPasswordEl.addEventListener('input', debounce(checkConfirmPassword));
+
 // Form submit event
 form.addEventListener('submit', function (e) {
     e.preventDefault();
