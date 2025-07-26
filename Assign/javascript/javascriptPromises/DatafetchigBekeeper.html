@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var apiUrl = 'https://dummyjson.com/products/';
+        let apiUrl = 'https://restcountries.com/v3.1/lang/spanish';
+
+        function fetchUsers() {
+            return fetch(apiUrl)
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+        }
+        fetchUsers()
+        .then(res=>{
+            console.log(res);
+        })
+        .catch(rej=>{
+            console.error(rej.message);
+        })
+
+    
+    </script>
+</body>
+
+</html>

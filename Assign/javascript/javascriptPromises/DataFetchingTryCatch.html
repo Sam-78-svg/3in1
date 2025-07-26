@@ -16,7 +16,7 @@
                         if (!res.ok) {
                             throw new Error('User not found');
                         }
-                        return res.json();
+                        return res.json();      //the first .then is used to check if the response is ok or not and convert the response to JSON
                     })
             }
             catch (err) {
@@ -28,6 +28,7 @@
             try {
                 newData(i)
                     .then(res => {
+                        // the second .then is used to handle the data received from the API
                         console.log("Data:", res);
                         html = `<div>
                                      <h4>
