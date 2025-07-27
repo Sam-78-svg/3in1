@@ -1,0 +1,77 @@
+:root {
+    --primary-color: #777;
+    --secondarY-color: #f7eeee;
+    --third-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--secondarY-color);
+    width: 30%;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+
+.dataForm {
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dataForm label {
+    display: block;
+    font-size: larger;
+    margin-top: 0.5rem;
+}
+
+.dataForm input {
+    height: 2rem;
+    font-size: 1rem;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid #333;
+    border-left: none;
+    border-top: none;
+    padding-left: 1rem;
+    border-right: none;
+}
+
+.dataForm .error {
+    color: red;
+    font-size: medium;
+    text-align: center
+}
+
+.dataForm .success {
+    color: green;
+    text-align: center;
+    font-size: medium;
+}
+
+#btn {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    width: 35%;
+    height: 2.5rem;
+    font-size: larger;
+}
+
+#btn:hover {
+    background-color: skyblue;
+    cursor: pointer;
+    box-shadow: 3 3 3 3px rgba(1, 1, 1, 10);
+}

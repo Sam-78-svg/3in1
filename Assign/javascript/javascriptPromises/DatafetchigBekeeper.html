@@ -10,7 +10,7 @@
 <body>
     <script>
         // var apiUrl = 'https://dummyjson.com/products/';
-        let apiUrl = 'https://restcountries.com/v3.1/lang/spanish';
+        let apiUrl = 'https://restcountries.com/v3.1/lang/english';
 
         function fetchUsers() {
             return fetch(apiUrl)
@@ -22,8 +22,12 @@
                 })
         }
         fetchUsers()
-        .then(res=>{
-            console.log(res);
+        .then(res => {
+            // res is an array of country objects
+            const caribbeanCountries = res.filter(country =>
+            country.subregion === 'Caribbean'
+            );
+            console.log(caribbeanCountries);
         })
         .catch(rej=>{
             console.error(rej.message);

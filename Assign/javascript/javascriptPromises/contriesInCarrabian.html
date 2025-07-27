@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let apiUrl = 'https://restcountries.com/v3.1/region/Asia';
+        
+        function contriesInCaribbean(){
+            return fetch(apiUrl)
+            .then((res)=>{
+                if(!res.ok){
+                    console.log("Country not found");
+                }
+                return res.json();
+            })
+        }
+
+        contriesInCaribbean()
+        .then(res =>{
+        //    console.log( res.filter(con => con.subreigon == 'Caribbean'));
+            const caribbeanCountries = res.filter(country => 
+                country.name.common === 'China'
+            )
+            console.log(caribbeanCountries);
+            console.log(res);
+        })
+        .catch(rej =>{
+            console.error(rej.message);
+        })
+    </script>
+</body>
+</html>

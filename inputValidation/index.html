@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" class="dataForm">
+            <h1 style="text-align: center;">Log In</h1>
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="firstName" placeholder="Enter your first name">
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="lastName" placeholder="Enter your last name">
+            <label for="userName">Username:</label>
+            <input type="text" name="userName" id="userName" placeholder="Choose a username">
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Enter your email address">
+            <label for="password">Password:</label>
+            <input type="text" name="password" id="password" placeholder="Enter your password">
+            <label for="conPassword">Confirm Password:</label>
+            <input type="password" name="conPassword" id="conPassword" placeholder="Re-enter your password">
+            <div style="align-items: center;justify-content: center;display: flex;margin-top: 1rem;">
+                <button type="submit" id="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        let firstNameEl = document.querySelector('#firstName');
+        let lastNameEl = document.querySelector('#lastName');
+        let userNameEl = document.querySelector('#userName');
+        let passwordEl = document.querySelector('#password');
+        let conPasswordEl = document.querySelector('#conPassword');
+        let form = document.querySelector('.dataForm');
+
+        // Helper to remove previous messages
+        function clearMessages(inputEl) {
+            let next = inputEl.nextElementSibling;
+            while (next && next.tagName === 'H6') {
+                let toRemove = next;
+                next = next.nextElementSibling;
+                toRemove.remove();
+            }
+        }
+
+        function isRequired(value) {
+            return value !== '';
+        }
+
+        function checkFirstName() {
+            clearMessages(firstNameEl);
+            let valid = false;
+            let firstName = firstNameEl.value.trim();
+            let message = document.createElement('h6');
+            if (!isRequired(firstName)) {
+                message.textContent = 'Firstname cannot be blank';
+                message.classList.add('error');
+                firstNameEl.after(message);
+            } else {
+                message.textContent = 'Firstname validated';
+                message.classList.add('success');
+                firstNameEl.after(message);
+                valid = true;
+            }
+            return valid;
+        }
+
+        function checkLastName() {
+            clearMessages(lastNameEl);
+            let valid = false;
+            let lastName = lastNameEl.value.trim();
+            let message = document.createElement('h6');
+            if (!isRequired(lastName)) {
+                message.textContent = 'Lastname cannot be blank';
+                message.classList.add('error');
+                lastNameEl.after(message);
+            } else {
+                message.textContent = 'Lastname validated';
+                message.classList.add('success');
+                lastNameEl.after(message);
+                valid = true;
+            }
+            return valid;
+        }
+
+        function checkUserName() {
+            clearMessages(userNameEl);
+            let valid = false;
+            let userName = userNameEl.value.trim();
+            let message = document.createElement('h6');
+            if (!isRequired(userName)) {
+                message.textContent = 'Username cannot be blank';
+                message.classList.add('error');
+                userNameEl.after(message);
+            } else {
+                message.textContent = 'Username validated';
+                message.classList.add('success');
+                userNameEl.after(message);
+                valid = true;
+            }
+            return valid;
+        }
+
+        function checkPassword() {
+            clearMessages(passwordEl);
+            let valid = false;
+            let password = passwordEl.value.trim();
+            let message = document.createElement('h6');
+            if (!isRequired(password)) {
+                message.textContent = 'Password cannot be blank';
+                message.classList.add('error');
+                passwordEl.after(message);
+            }if(password.length<=8){
+                message.textContent = 'Password must be at least 8 characters long';
+                message.classList.add('error');
+                passwordEl.after(message);
+            } else {
+                message.textContent = 'Password validated';
+                message.classList.add('success');
+                passwordEl.after(message);
+                valid = true;
+            }
+            return valid;
+        }
+
+        //adding debounsing
+        firstNameEl.addEventListener('input', () => {
+            clearMessages(firstNameEl);
+            setTimeout(checkFirstName, 500);
+        });
+        lastNameEl.addEventListener('input', () => {
+            clearMessages(lastNameEl);
+            setTimeout(checkLastName, 500);
+        });
+        userNameEl.addEventListener('input', () => {
+            clearMessages(userNameEl);
+            setTimeout(checkUserName, 500);
+        });
+        passwordEl.addEventListener('input', () => {
+            clearMessages(passwordEl);
+            setTimeout(checkPassword, 500);
+        });
+        conPasswordEl.addEventListener('input', () => {
+            clearMessages(conPasswordEl);
+            setTimeout(checkConPassword, 500);
+        });
+
+        function checkConPassword() {
+            clearMessages(conPasswordEl);
+            let valid = false;
+            let conPassword = conPasswordEl.value.trim();
+            let message = document.createElement('h6');
+            if (!isRequired(conPassword)) {
+                message.textContent = 'Confirm Password cannot be blank';
+                message.classList.add('error');
+                conPasswordEl.after(message);
+            } else if (passwordEl.value !== conPasswordEl.value) {
+                message.textContent = "Passwords don't match";
+                message.classList.add('error');
+                conPasswordEl.after(message);
+            } else {
+                message.textContent = 'Confirm Password validated';
+                message.classList.add('success');
+                conPasswordEl.after(message);
+                valid = true;
+            }
+            return valid;
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isFirstNameValid = checkFirstName(),
+                isLastNameValid = checkLastName(),
+                isUserNameValid = checkUserName(),
+                isPasswordValid = checkPassword(),
+                isConPasswordValid = checkConPassword();
+
+            let validForm = isFirstNameValid && isLastNameValid && isUserNameValid && isPasswordValid && isConPasswordValid;
+
+            if (validForm) {
+                alert('Form Submitted Successfully');
+                form.reset();
+                [firstNameEl, lastNameEl, userNameEl, passwordEl, conPasswordEl].forEach(el => {
+                    clearMessages(el);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+        //promises with Promise contructor
         let myPromise = new Promise((res,rej)=>{
             let success = false;
             if(success){
@@ -28,6 +29,7 @@
         })
     </script>
     <script>
+        //promises without contructor
         function delay(ms){
             return new Promise((res)=>{
                 setTimeout(() => {
