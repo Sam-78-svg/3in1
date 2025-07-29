@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const jsonString = '{"name": "amit","age": 50,"mobileNUmber": 9393320322}'
+        const jsObject = JSON.parse(jsonString);
+        const jsonO = JSON.stringify(jsObject);
+        console.log(jsObject);
+        console.log(jsonO );
+    </script>
+    <script>
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then(res => res.json())            //type conversion json to jsObject
+        .then(data => console.log(data))
+    </script>
+</body>
+
+</html>

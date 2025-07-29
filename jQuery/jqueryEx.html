@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //cdn stand for content delivery netwok (CDN)
+        $(document).ready(function(){
+            $('p').click(() => {
+                $(this).css('background-color', 'red');
+            });
+            $('button').dblclick(()=>{
+                $('p').toggle($('button').text() === 'Hide' ? 'Show' : 'Hide');
+                
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>this is first paragraph</p>
+    <p>masdlkfla alksdjf la</p>
+    <p>lskdflasdlf alkdsfl</p>
+    <button>Hide</button>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The jQuery Story: An Interactive Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .kpi-card {
+            background: linear-gradient(135deg, #242582, #00A6ED);
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            line-height: 1;
+            color: #FFB400;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-gray-900 mb-2">The jQuery Story</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">From a revolutionary library that simplified the web to its modern role in a new development era.</p>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <div class="lg:col-span-2 p-6 md:p-8 rounded-2xl shadow-lg bg-white">
+                <h2 class="text-2xl font-bold mb-4 text-center">The Dawn of a New Era</h2>
+                <p class="text-center text-gray-600 mb-6 max-w-2xl mx-auto">In the early 2000s, web development was fractured by "browser wars." Developers needed complex code to perform simple tasks across different browsers. In 2006, John Resig released jQuery, a library designed to abstract away these inconsistencies with a simple motto: "Write less, do more."</p>
+                <div class="kpi-card text-white p-8 rounded-xl text-center shadow-2xl">
+                    <p class="text-2xl font-semibold mb-2">A Web Transformed</p>
+                    <p class="text-6xl font-black">80%</p>
+                    <p class="text-lg opacity-90 mt-2">Of the top 1 million websites used jQuery by 2019, cementing its status as a foundational technology of the modern web.</p>
+                </div>
+            </div>
+            
+            <div class="p-6 md:p-8 rounded-2xl shadow-lg bg-white">
+                <h2 class="text-2xl font-bold mb-4">The "Write Less, Do More" Philosophy</h2>
+                <p class="text-gray-600 mb-6">jQuery's core principle was to simplify complex JavaScript. A task requiring multiple lines of verbose, native code could often be accomplished in a single, readable, and chainable line of jQuery.</p>
+                <div class="chart-container h-80 md:h-96">
+                    <canvas id="codeComparisonChart"></canvas>
+                </div>
+                <p class="text-center text-gray-600 mt-4">This chart visualizes the dramatic reduction in code complexity for a common task: selecting all buttons and adding a click event. jQuery's concise syntax was a game-changer for productivity.</p>
+            </div>
+
+            <div class="p-6 md:p-8 rounded-2xl shadow-lg bg-white flex flex-col justify-center">
+                <h2 class="text-2xl font-bold mb-4">The Fundamental Syntax</h2>
+                 <p class="text-gray-600 mb-6">The entire library's power is accessible through a simple, consistent pattern. This flow represents the core of almost every jQuery operation you will ever write.</p>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-center">
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-inner">
+                        <p class="font-mono text-lg font-bold text-blue-600">$("selector")</p>
+                        <p class="text-sm text-gray-700 mt-1">Select an element</p>
+                    </div>
+                    <div class="flow-arrow font-black">→</div>
+                    <div class="bg-gray-100 p-4 rounded-lg shadow-inner">
+                        <p class="font-mono text-lg font-bold text-orange-600">.action()</p>
+                        <p class="text-sm text-gray-700 mt-1">Perform an action</p>
+                    </div>
+                </div>
+                <p class="text-center text-gray-600 mt-6">This elegant `selector-action` model, combined with method chaining, allowed developers to write fluid, expressive code.</p>
+            </div>
+
+            <div class="p-6 md:p-8 rounded-2xl shadow-lg bg-white">
+                <h2 class="text-2xl font-bold mb-4">Selector Performance: Speed is Key</h2>
+                <p class="text-gray-600 mb-6">Not all selectors are created equal. jQuery's performance is tied to selector efficiency. ID selectors are the fastest as they map to a native browser method, while complex queries require more work.</p>
+                <div class="chart-container">
+                    <canvas id="selectorPerformanceChart"></canvas>
+                </div>
+                <p class="text-center text-gray-600 mt-4">This demonstrates the relative speed difference. Caching a selection in a variable (`var $elements = $('.my-class')`) is a key best practice to avoid re-running slower queries.</p>
+            </div>
+
+            <div class="p-6 md:p-8 rounded-2xl shadow-lg bg-white">
+                <h2 class="text-2xl font-bold mb-4">Common Selector Distribution</h2>
+                <p class="text-gray-600 mb-6">While jQuery offers a vast array of selectors, a few core types handle the majority of daily tasks. Understanding these is the first step to mastering DOM traversal.</p>
+                <div class="chart-container">
+                    <canvas id="selectorDistributionChart"></canvas>
+                </div>
+                <p class="text-center text-gray-600 mt-4">Class selectors are the workhorse for styling groups of elements, while ID selectors are perfect for targeting unique, critical components of a page.</p>
+            </div>
+
+            <div class="lg:col-span-2 p-6 md:p-8 rounded-2xl shadow-lg bg-white">
+                <h2 class="text-2xl font-bold mb-4 text-center">Event Delegation: The Smart Way to Handle Events</h2>
+                <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">Instead of attaching event listeners to hundreds of elements, delegation attaches a single listener to a parent. This improves performance and works automatically for new elements added to the DOM later.</p>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-inner">
+                    <div class="flex flex-col md:flex-row items-center justify-around text-center">
+                        <div class="mb-4 md:mb-0">
+                            <p class="text-lg font-semibold">1. Event Occurs</p>
+                            <div class="mt-2 p-2 border-2 border-dashed border-gray-400 rounded-lg">
+                                <p class="font-mono text-sm">Child Element</p>
+                                <p class="text-xs text-gray-500">(e.g., a delete button)</p>
+                            </div>
+                        </div>
+                        <div class="flow-arrow transform md:-translate-y-3">↓</div>
+                        <div>
+                            <p class="text-lg font-semibold">2. Event "Bubbles Up"</p>
+                            <div class="mt-2 p-4 border-2 border-blue-500 bg-blue-50 rounded-lg">
+                                <p class="font-mono text-lg">Static Parent</p>
+                                <p class="text-sm text-gray-600">Listener is attached here!</p>
+                                <p class="font-mono text-xs text-blue-700 mt-2">.on('click', '.child', fn)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 md:p-8 rounded-2xl shadow-lg bg-white">
+                <h2 class="text-2xl font-bold mb-4">Animation Methods Compared</h2>
+                <p class="text-gray-600 mb-6">jQuery made animations accessible to everyone. From simple toggles to complex custom movements, its effects library provided a range of tools for enhancing user interfaces.</p>
+                <div class="chart-container">
+                    <canvas id="animationComparisonChart"></canvas>
+                </div>
+                <p class="text-center text-gray-600 mt-4">The `.animate()` method offers the most control, while methods like `.toggle()` and `.slideToggle()` offer maximum simplicity for common UI patterns.</p>
+            </div>
+
+            <div class="p-6 md:p-8 rounded-2xl shadow-lg bg-white">
+                <h2 class="text-2xl font-bold mb-4">Simplifying AJAX</h2>
+                <p class="text-gray-600 mb-6">jQuery's AJAX methods were revolutionary, replacing the complex native `XMLHttpRequest` object with simple, intuitive functions for communicating with a server without a page refresh.</p>
+                <div class="chart-container">
+                    <canvas id="ajaxUsageChart"></canvas>
+                </div>
+                <p class="text-center text-gray-600 mt-4">While `$.ajax()` is the powerful, configurable core, shorthand methods like `$.get()` and `$.getJSON()` cover the vast majority of data-fetching needs.</p>
+            </div>
+            
+            <div class="lg:col-span-2 p-6 md:p-8 rounded-2xl shadow-lg bg-white">
+                <h2 class="text-2xl font-bold mb-4 text-center">jQuery in 2025: A Modern Perspective</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">The web has evolved. Modern JavaScript and frameworks like React or Vue now offer native solutions for many of jQuery's original use cases. So, where does it fit today?</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-center">When is jQuery a Good Choice?</h3>
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-inner space-y-4">
+                            <div class="flex items-start">
+                                <span class="text-green-500 text-2xl mr-3">✔</span>
+                                <div>
+                                    <h4 class="font-semibold">Legacy Systems & WordPress</h4>
+                                    <p class="text-sm text-gray-600">Essential for maintaining millions of existing sites and the standard for WordPress development.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-green-500 text-2xl mr-3">✔</span>
+                                <div>
+                                    <h4 class="font-semibold">Quick Prototyping & Simple Sites</h4>
+                                    <p class="text-sm text-gray-600">Perfect for adding simple interactivity without a complex build process. Just add a script tag.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-green-500 text-2xl mr-3">✔</span>
+                                <div>
+                                    <h4 class="font-semibold">Vast Plugin Ecosystem</h4>
+                                    <p class="text-sm text-gray-600">Leverage thousands of mature, battle-tested plugins for complex UI components.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-center">Primary Modern Use Cases</h3>
+                        <div class="chart-container h-80">
+                            <canvas id="modernUsageChart"></canvas>
+                        </div>
+                        <p class="text-center text-gray-600 mt-4 text-sm">While not the default for new, complex apps, jQuery's role in maintaining the existing web and powering platforms like WordPress remains significant.</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="text-center mt-12 py-6 border-t border-gray-200">
+            <p class="text-gray-500">An infographic by Canvas Infographics. Data sourced from "A Comprehensive Monograph on the jQuery Library".</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const vibrantPalette = {
+            blue: '#00A6ED',
+            green: '#7FB800',
+            yellow: '#FFB400',
+            orange: '#F6511D',
+            darkBlue: '#242582',
+            lightGray: '#e2e8f0'
+        };
+
+        const chartTooltipConfig = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+        
+        function wrapLabel(label, maxWidth = 16) {
+            if (label.length <= maxWidth) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxWidth) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            new Chart(document.getElementById('codeComparisonChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Vanilla JavaScript', 'jQuery'],
+                    datasets: [{
+                        label: 'Lines of Code',
+                        data: [5, 1],
+                        backgroundColor: [vibrantPalette.lightGray, vibrantPalette.blue],
+                        borderColor: [vibrantPalette.lightGray, vibrantPalette.blue],
+                        borderWidth: 1
+                    }]
+                },
+                options: { ...chartTooltipConfig,
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { ...chartTooltipConfig.plugins,
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: { beginAtZero: true, ticks: { stepSize: 1 } }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('selectorPerformanceChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['ID Selector (#id)', 'Class Selector (.class)', 'Complex Descendant'],
+                    datasets: [{
+                        label: 'Relative Speed (Lower is Faster)',
+                        data: [1, 15, 50],
+                        backgroundColor: [vibrantPalette.green, vibrantPalette.yellow, vibrantPalette.orange],
+                    }]
+                },
+                options: { ...chartTooltipConfig,
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { ...chartTooltipConfig.plugins,
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('selectorDistributionChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Class (.class)', 'ID (#id)', 'Element (p)', 'Attribute ([href])', 'Other Filters'],
+                    datasets: [{
+                        data: [55, 25, 10, 5, 5],
+                        backgroundColor: [vibrantPalette.blue, vibrantPalette.green, vibrantPalette.yellow, vibrantPalette.orange, vibrantPalette.darkBlue],
+                        hoverOffset: 4
+                    }]
+                },
+                options: { ...chartTooltipConfig,
+                    responsive: true,
+                    maintainAspectRatio: false,
+                }
+            });
+
+            new Chart(document.getElementById('animationComparisonChart'), {
+                type: 'radar',
+                data: {
+                    labels: ['Simplicity', 'Performance', 'Control', 'Compatibility'],
+                    datasets: [{
+                        label: '.toggle()',
+                        data: [9, 7, 3, 10],
+                        fill: true,
+                        backgroundColor: 'rgba(0, 166, 237, 0.2)',
+                        borderColor: vibrantPalette.blue,
+                        pointBackgroundColor: vibrantPalette.blue,
+                    }, {
+                        label: '.slideToggle()',
+                        data: [8, 6, 5, 10],
+                        fill: true,
+                        backgroundColor: 'rgba(127, 184, 0, 0.2)',
+                        borderColor: vibrantPalette.green,
+                        pointBackgroundColor: vibrantPalette.green,
+                    }, {
+                        label: '.animate()',
+                        data: [4, 5, 10, 9],
+                        fill: true,
+                        backgroundColor: 'rgba(246, 81, 29, 0.2)',
+                        borderColor: vibrantPalette.orange,
+                        pointBackgroundColor: vibrantPalette.orange,
+                    }]
+                },
+                options: { ...chartTooltipConfig,
+                    responsive: true,
+                    maintainAspectRatio: false,
+                }
+            });
+
+            new Chart(document.getElementById('ajaxUsageChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Simple Data Retrieval', 'Sending Form Data', 'API Communication', 'Complex Request'],
+                    datasets: [{
+                        label: '$.get()',
+                        data: [70, 0, 20, 0],
+                        backgroundColor: vibrantPalette.blue,
+                    }, {
+                        label: '$.post()',
+                        data: [0, 80, 10, 0],
+                        backgroundColor: vibrantPalette.green,
+                    }, {
+                        label: '$.getJSON()',
+                        data: [10, 0, 60, 0],
+                        backgroundColor: vibrantPalette.yellow,
+                    }, {
+                        label: '$.ajax()',
+                        data: [20, 20, 10, 100],
+                        backgroundColor: vibrantPalette.orange,
+                    }]
+                },
+                options: { ...chartTooltipConfig,
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { stacked: true },
+                        y: { stacked: true, beginAtZero: true }
+                    }
+                }
+            });
+            
+            new Chart(document.getElementById('modernUsageChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Legacy System Maintenance', 'WordPress Development', 'Quick Prototypes', 'Plugin Usage'],
+                    datasets: [{
+                        data: [45, 35, 15, 5],
+                        backgroundColor: [vibrantPalette.darkBlue, vibrantPalette.blue, vibrantPalette.green, vibrantPalette.yellow],
+                        hoverOffset: 4
+                    }]
+                },
+                options: { ...chartTooltipConfig,
+                    responsive: true,
+                    maintainAspectRatio: false,
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
