@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <button>Fade In Effect</button>
+    <button id="fadeOut">Fade out Effect</button>
+    <br><br><br><br>
+    <div id="div1" style="width: 80px;height: 80px;display: none;background: #777;border: 0cap1px solid black;"></div><br>
+    <div id="div2" style="width: 80px;height: 80px;display: none;background: #951c1c;border: 0cap1px solid black;"></div><br>
+    <div id="div3" style="width: 80px;height: 80px;display: none;background: #1a0c0c;border: 0cap1px solid rgb(133, 6, 6);"></div>
+    <script>
+        $(()=>{
+            $('button').click(()=>{
+                $('#div1').fadeIn(300);
+                $('#div2').fadeIn(2000);
+                $('#div3').fadeIn(3000);
+            })
+            $('#fadeOut').click(()=>{
+                $('#div3').fadeOut(1000);
+                $('#div2').fadeOut(2000);
+                 $('#div1').fadeOut(3000);
+            })
+        })
+    </script>
+</body>
+</html>

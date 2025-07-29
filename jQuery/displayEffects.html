@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<script>
+   
+</script>
+<body>
+    <p>
+         <strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, sunt debitis obcaecati quidem modi veniam! Earum totam perspiciatis itaque labore dolorem? Sunt suscipit perspiciatis modi cupiditate excepturi laudantium, nulla atque tempore dolor, nostrum ducimus minima reprehenderit reiciendis doloremque illo repudiandae sed eaque quam facere. Debitis, iste, quibusdam, incidunt quidem aspernatur nihil dicta quisquam temporibus optio id illo eligendi architecto nobis voluptatibus nesciunt doloribus facilis ut molestiae autem! Repellendus suscipit aspernatur deleniti error iste asperiores illo saepe tenetur, exercitationem cupiditate quia odit tempora sunt, minus consectetur ipsa esse quam ipsam optio? Consequuntur beatae nobis blanditiis, quis minima facere minus quibusdam! Ex.
+        </strong>
+    </p>
+    <button id="toggle">Hide</button>
+    <script>
+        // Using jQuery to toggle the visibility of the <strong> element
+        $(()=>{
+             $('#toggle').click(function(){
+                $('strong').toggle(600,'swing', function() {
+                    // Update button text based on <strong> visibility after toggle completes
+                    if ($('strong').is(':visible')) {
+                        $('#toggle').text('Hide');
+                    } else {
+                        $('#toggle').text('Show');
+                    }
+                });
+            });
+            // jQuery fade effects
+        })
+    
+    </script>
+</body>
+</html>
