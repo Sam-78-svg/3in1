@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<script>
+    $(()=>{
+        $('#get').click(()=>{
+            alert($('#para').html());
+        })
+        $('#set').click(()=>{
+            $('strong').html('<em>Wellcome to all in my class</em>');
+        })
+    })
+</script>
+<body>
+    <p id="para">Hellow <strong>Welcome to my website</strong></p>
+    <button id="get">Get html</button>
+    <button id="set">Set html</button>
+</body>
+</html>

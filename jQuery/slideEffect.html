@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<style>
+    .slide,
+    .panel {
+        padding: 5px;
+        text-align: center;
+        background: #00ffff;
+        border: 1px solid black;
+
+    }
+    #btn1{
+        padding: 20px;
+        background: #000;
+        color: white;
+    }
+    .panel {
+        padding: 50px;
+        display: none;
+    }
+</style>
+<script>
+    $(() => {
+        $('.slide').click(() => {
+            $('.panel').slideDown(2000, 'linear');
+        });
+        $('#btn1').click(()=>{
+            $('.panel').slideUp(2000,'linear');
+        });
+        $('#toggle').click(()=>{
+            $('.panel').slideToggle(2000,'linear')
+        })
+    });
+</script>
+
+<body>
+    <div class="slide">Click here to slide Down</div>
+    <div class="panel">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, ullam harum veritatis iure amet
+        quam provident quisquam optio sit odit. <br>
+        <button id="btn1">Click to slide UP</button>
+    </div>
+    <button id="toggle">toggle</button>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(()=>{
+            $('#btn1').click(()=>{
+                $('.divanimate').delay(1000).animate({left:'500px',height:'300px',width:'300px'},3000)      //delay and animate metthods
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button id="btn1">Start Animation</button>
+    <br>
+    <div class="divanimate" style="background-color: aqua;height: 100px;width: 100px;position: absolute;"></div>
+</body>
+
+</html>
