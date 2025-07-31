@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Text Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .editor-container {
+            width: 80%;
+            max-width: 900px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        textarea {
+            width: 100%;
+            height: 500px;
+            padding: 15px;
+            box-sizing: border-box;
+            border: none;
+            font-size: 16px;
+            line-height: 1.5;
+            resize: vertical; /* Allow vertical resizing */
+            outline: none; /* Remove focus outline */
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace; /* Monospaced font for code */
+        }
+
+        .controls {
+            padding: 15px;
+            border-top: 1px solid #eee;
+            background-color: #f9f9f9;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end; /* Align buttons to the right */
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button.save-btn {
+            background-color: #007bff;
+            color: white;
+        }
+
+        button.save-btn:hover {
+            background-color: #0056b3;
+        }
+
+        button.open-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        button.open-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Hidden file input */
+        #fileInput {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Web Text Editor</h1>
+
+    <div class="editor-container">
+        <textarea id="editor" placeholder="Start typing here..."></textarea>
+        <div class="controls">
+            <button class="open-btn" onclick="document.getElementById('fileInput').click()">Open File</button>
+            <button class="save-btn" onclick="saveFile()">Save</button>
+            <input type="file" id="fileInput" accept=".txt" onchange="openFile(event)">
+        </div>
+    </div>
+
+    <script>
+        const editor = document.getElementById('editor');
+
+        // Function to save the content of the editor to a file
+        function saveFile() {
+            const textContent = editor.value;
+            const blob = new Blob([textContent], { type: 'text/plain' });
+            const anchor = document.createElement('a');
+            anchor.download = 'untitled.txt'; // Default file name
+            anchor.href = window.URL.createObjectURL(blob);
+            anchor.click();
+            window.URL.revokeObjectURL(anchor.href); // Clean up
+        }
+
+        // Function to open a file and load its content into the editor
+        function openFile(event) {
+            const file = event.target.files[0];
+            if (!file) {
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                editor.value = e.target.result;
+            };
+            reader.readAsText(file);
+        }
+    </script>
+</body>
+</html>
