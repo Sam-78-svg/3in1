@@ -1,3 +1,3 @@
 import products from "./products";  
 
-const productList = document.getElementById('product-list')
+const productList = document.getElementById('product-list');
