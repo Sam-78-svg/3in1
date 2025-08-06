@@ -8,5 +8,26 @@ body{
 
 .card-img-top{
     height: 200px;
-    object-fit:cover;
+    object-fit:contain;
+}
+
+.card-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.btn-outline-primary{
+    border-color: #007bff;
+    color: #007bff;
+    font-size: 0.9rem;
+}
+.card-text{
+    font-size: 0.9rem;
+    color: #555;
+}
+
+#productList .card-title{
+    font-size: 1rem;
+}
+#productList .card-text{
+    font-size: 1rem;
 }
