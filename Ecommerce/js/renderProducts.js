@@ -1,7 +1,7 @@
 import products from "./products.js";  
 
 const productList = document.getElementById('product-list');
-const categoryFilter = document.getElementById('categoryFilter');
+const categoryFilter = document.getElementById('CategoryFilter');
 const minPrice = document.getElementById('minPrice');
 const maxPrice = document.getElementById('maxPrice');
 const applyFilterBtn = document.getElementById('applyFilter');
@@ -29,14 +29,14 @@ function addToCart(product){
 
 //render product to card
 function renderProducts(filteredProducts){
-    productList.innerHTML='';
+    // productList.innerHTML='';
     if(filteredProducts.length == 0){
         productList.innerHTML = `<p class="text-muted">No Product available</p>`
         return;
     }
     filteredProducts.forEach(product => {
         const col = document.createElement('div')
-        col.className = 'col-sm-6 col-md-4 col-lg-4 col-lg-4 mb-4';
+        col.className = 'col-sm-6 col-md-4 col-lg-4 mb-4';
         col.innerHTML = `
             <div class="card h-100 shadow-sm">
                 <img 
@@ -76,7 +76,7 @@ function populate(){
     categories.forEach(cat =>{
         const option =document.createElement('option');
         option.value = cat;
-        option.textContent = cat.charAt(0).toUpperCase()+cat.slice[1];
+        option.textContent = cat.charAt(0).toUpperCase()+cat.slice(1);
         categoryFilter.appendChild(option);
     })
 }
@@ -93,10 +93,14 @@ function filterProduct(){
     })
     renderProducts(filtered);
 }
-applyFilterBtn.addEventListener('click', filterProduct);
+applyFilterBtn.addEventListener('click', ()=>{
+    productList.innerHTML='';
+    filterProduct();
+});
 
 // Initial render
-populate();
+
 renderProducts(products);
+populate();
 updateCartCount();
 // renderProducts();
